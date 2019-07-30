@@ -1,6 +1,7 @@
 package com.codecool.games.service;
 
 import com.codecool.games.model.Genre;
+import com.codecool.games.model.Questionnaire;
 import com.codecool.games.model.ScreenFun;
 import com.codecool.games.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +20,14 @@ public class GameService {
     private Random random;
 
     public ScreenFun getRandomGame() {
-        return null;
+        return gameRepository.getScreenFunsById(random.nextInt(20));
     }
 
     public List<ScreenFun> getAllGames() {
         return gameRepository.findAll();
     }
 
-    public List<ScreenFun> getFilteredGames() {
+    public List<ScreenFun> getFilteredGames(Questionnaire questionnaire) {
         return gameRepository.getScreenFunsByGenre(Genre.ACTION);
     }
 }

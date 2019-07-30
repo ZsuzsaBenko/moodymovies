@@ -1,12 +1,10 @@
 package com.codecool.games.controller;
 
+import com.codecool.games.model.Questionnaire;
 import com.codecool.games.model.ScreenFun;
 import com.codecool.games.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,7 +26,7 @@ public class GameController {
     }
 
     @PostMapping("/questionnaire")
-    public List<ScreenFun> getFilteredGames() {
-       return gameService.getFilteredGames();
+    public List<ScreenFun> getFilteredGames(@RequestBody Questionnaire questionnaire) {
+       return gameService.getFilteredGames(questionnaire);
     }
 }

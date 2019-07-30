@@ -12,6 +12,5 @@ import java.util.List;
 public interface GameRepository extends JpaRepository<ScreenFun, Long> {
 
     List<ScreenFun> getScreenFunsByGenre(@Param("genre") Genre genre);
-
     ScreenFun getScreenFunsById(@Param("id") long id);
 }
