@@ -29,7 +29,6 @@ public class GameController {
 
     @PostMapping("/questionnaire")
     public List<ScreenFun> getFilteredGames() {
-        return null;
-        /* TODO */
+       return gameService.getFilteredGames();
     }
 }
