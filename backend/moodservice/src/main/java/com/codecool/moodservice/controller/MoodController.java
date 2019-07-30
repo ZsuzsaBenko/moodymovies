@@ -18,7 +18,7 @@ public class MoodController {
 
     @GetMapping("/random-choice")
     public ScreenFun getRandomItem(ServiceType serviceType) {
-        return this.moodService.getRandomItem(serviceType);
+        return this.moodService.getRandomItem(ServiceType.ANIME);
     }
 
     @GetMapping("/checkbox")
@@ -33,7 +33,7 @@ public class MoodController {
 
     @GetMapping("/all")
     public List<ScreenFun> getAllItems() {
-        return this.moodService.getAllItems();
+        return this.moodService.getAllItems(ServiceType.ANIME);
     }
 
     @PostMapping("/questionnaire")

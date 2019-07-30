@@ -27,8 +27,8 @@ public class MoodService {
         return null;
     }
 
-    public List<ScreenFun> getAllItems() {
-        return null;
+    public List<ScreenFun> getAllItems(ServiceType serviceType) {
+        return this.serviceCaller.getAllItems(serviceType);
     }
 
     public List<ScreenFun> getOneItemFromEveryType() {
