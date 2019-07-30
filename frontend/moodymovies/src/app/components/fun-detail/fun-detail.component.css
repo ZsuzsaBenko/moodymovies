@@ -1,0 +1,43 @@
+h2 {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.fun-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.poster {
+  max-width: 400px;
+  height: auto;
+}
+
+.poster img {
+  width: 100%;
+  float: left;
+}
+
+.details {
+  max-width: 400px;
+  padding-left: 50px;
+}
+
+.plot {
+  width: 100%;
+  margin: 40px auto;
+}
+
+.iframe-container {
+  width: 100%;
+}
+
+.iframe-container iframe {
+  display: block;
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+}
