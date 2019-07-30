@@ -21,7 +21,7 @@ public class ScreenFun {
     @NotNull
     private String title;
 
-    private int rating;
+    private double rating;
 
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
