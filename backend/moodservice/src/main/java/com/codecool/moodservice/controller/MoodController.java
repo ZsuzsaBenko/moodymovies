@@ -22,7 +22,7 @@ public class MoodController {
     }
 
     @GetMapping("/checkbox")
-    public List<ScreenFun> getRandomItemByCheckBox() {
+    public List<ScreenFun> getRandomItemsByCheckBox() {
         return this.moodService.getRandomFromEverywhere();
     }
 
