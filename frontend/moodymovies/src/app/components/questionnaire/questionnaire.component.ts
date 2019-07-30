@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Questionnaire} from '../../models/Questionnaire';
+import {NavigationExtras, Router} from '@angular/router';
 
 @Component({
   selector: 'app-questionnaire',
@@ -7,15 +8,15 @@ import {Questionnaire} from '../../models/Questionnaire';
   styleUrls: ['./questionnaire.component.css']
 })
 export class QuestionnaireComponent implements OnInit {
-  gender: number;
+  gender: string;
   age: number;
   horoscope: string;
-  alone: number;
-  timeOfDay: number;
+  alone: string;
+  timeOfDay: string;
   mood: string;
-  masochist: number;
+  masochist: string;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -23,12 +24,18 @@ export class QuestionnaireComponent implements OnInit {
 
   onSubmit() {
     const questionnaire = new Questionnaire();
-    questionnaire.gender = this.gender;
-    questionnaire.age = this.age;
+    questionnaire.gender = parseInt(this.gender, 10);
+    questionnaire.age = (this.age >= 0 && this.age <= 100) ? this.age : 18;
     questionnaire.horoscope = this.horoscope;
-    questionnaire.alone = this.alone;
-    questionnaire.timeOfDay = this.timeOfDay;
+    questionnaire.alone = parseInt(this.alone, 10);
+    questionnaire.timeOfDay = parseInt(this.timeOfDay, 10);
     questionnaire.mood = this.mood;
-    questionnaire.masochist = this.masochist;
+    questionnaire.masochist = parseInt(this.masochist, 10);
+
+    const navigationExtras: NavigationExtras = {
+      queryParams: questionnaire
+    };
+
+    this.router.navigate(['/random-profile'], navigationExtras).then();
   }
 }

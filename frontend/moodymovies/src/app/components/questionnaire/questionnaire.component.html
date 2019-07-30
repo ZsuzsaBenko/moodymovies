@@ -4,14 +4,14 @@
   <div>
     <form ngForm (ngSubmit)="onSubmit()">
       <p>Are you male or female?</p>
-      <input type="radio" id="male" name="gender" value="male" checked>
+      <input type="radio" id="male" name="gender" value="1" [(ngModel)]='gender' checked>
       <label for="male">male</label>
-      <input type="radio" id="female" name="gender" value="female">
+      <input type="radio" id="female" name="gender" value="0" [(ngModel)]='gender'>
       <label for="female">female</label>
       <label for="age">How old are you?</label>
-      <input type="number" min="0" max="100" id="age">
+      <input type="number" min="0" max="100" id="age" name="age" [(ngModel)]="age">
       <label for="horoscope">What's your star sign?</label>
-      <select name="horoscope" id="horoscope">
+      <select name="horoscope" id="horoscope" [(ngModel)]="horoscope">
         <option value="AQUARIUS" selected>Aquarius</option>
         <option value="PISCES">Pisces</option>
         <option value="ARIES">Aries</option>
@@ -26,17 +26,17 @@
         <option value="CAPRICORN">Capricorn</option>
       </select>
       <p>Are you going to be alone?</p>
-      <input type="radio" id="alone-yes" name="alone" value="yes" checked>
+      <input type="radio" id="alone-yes" name="alone" value="1" [(ngModel)]="alone" checked>
       <label for="alone-yes">yes</label>
-      <input type="radio" id="alone-no" name="alone" value="no">
+      <input type="radio" id="alone-no" name="alone" value="0" [(ngModel)]="alone">
       <label for="alone-no">no</label>
       <p>What time are you going to watch the film or play the game?</p>
-      <input type="radio" id="day" name="time-of-day" value="day" checked>
+      <input type="radio" id="day" name="time-of-day" value="1" [(ngModel)]="timeOfDay" checked>
       <label for="day">during the day</label>
-      <input type="radio" id="night" name="time-of-day" value="night">
+      <input type="radio" id="night" name="time-of-day" value="0" [(ngModel)]="timeOfDay">
       <label for="night">at night</label>
       <label for="mood">As for your mood, do you want to...</label>
-      <select name="mood" id="mood">
+      <select name="mood" id="mood" [(ngModel)]="mood">
         <option value="CRY" selected>cry?</option>
         <option value="LAUGH">laugh?</option>
         <option value="THINK">think?</option>
@@ -45,9 +45,9 @@
         <option value="BE_THRILLED">be thrilled?</option>
       </select>
       <p>A last question - are you a masochist?</p>
-      <input type="radio" id="masochist-yes" name="masochist" value="yes" checked>
+      <input type="radio" id="masochist-yes" name="masochist" value="1" [(ngModel)]="masochist"checked>
       <label for="masochist-yes">yes</label>
-      <input type="radio" id="masochist-no" name="masochist" value="no">
+      <input type="radio" id="masochist-no" name="masochist" value="0" [(ngModel)]="masochist">
       <label for="masochist-no">no</label>
       <input type="submit" value="Submit">
     </form>

@@ -26,7 +26,7 @@ export class FunService {
     return test1;
   }
 
-  getProfile() {
+  getProfile(questionnaire) {
     const test1 = new ScreenFun();
     test1.funType = 'movie';
     test1.genre = 'horror';
