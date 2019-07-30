@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -15,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Game {
+public class ScreenFun {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
@@ -24,13 +21,17 @@ public class Game {
     @NotNull
     private String title;
 
+    @NotNull
+    private String funType;
+
     private int rating;
 
-    private String genre;
+    @Enumerated(value = EnumType.STRING)
+    private Genre genre;
 
-    private List staff;
+    private List<String> staff;
 
-    private List actors;
+    private List<String> actors;
 
     private int year;
 
@@ -40,5 +41,5 @@ public class Game {
 
     private String poster;
 
-    private String link;
+    private String trailer;
 }
