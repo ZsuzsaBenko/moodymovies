@@ -2,7 +2,7 @@ package com.codecool.games.controller;
 
 import com.codecool.games.model.ScreenFun;
 import com.codecool.games.service.GameService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/games")
-@RequiredArgsConstructor
 public class GameController {
 
-    private final GameService gameService;
+    @Autowired
+    GameService gameService;
 
     @GetMapping("/random")
     public ScreenFun getRandomGame() {

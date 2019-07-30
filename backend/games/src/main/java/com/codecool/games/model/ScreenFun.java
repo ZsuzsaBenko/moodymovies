@@ -29,8 +29,10 @@ public class ScreenFun {
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
 
+    @ElementCollection
     private List<String> staff;
 
+    @ElementCollection
     private List<String> actors;
 
     private int year;
