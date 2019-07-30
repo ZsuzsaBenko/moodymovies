@@ -19,7 +19,7 @@ public class AnimeService {
     private AnimeRepository repository;
 
     @Autowired
-    AnimeService(AnimeRepository repository) {
+    public AnimeService(AnimeRepository repository) {
         this.repository = repository;
     }
 
@@ -33,7 +33,6 @@ public class AnimeService {
     }
 
     public ScreenFun getOneBasedOnQuestionnaire(Questionnaire questionnaire) {
-
 
 
         return null;

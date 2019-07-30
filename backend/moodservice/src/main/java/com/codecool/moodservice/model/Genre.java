@@ -2,13 +2,17 @@ package com.codecool.moodservice.model;
 
 public enum Genre {
 
-    COMEDY,
-    HORROR,
-    DOCUMENTARY,
     DRAMA,
-    SCIFI,
-    ACTION,
+    COMEDY,
+    ROMANCE,
+    CRIME,
+    HORROR,
+    THRILLER,
+    DOCUMENTARY,
     ANIMATED,
-    ROMANCE
+    FANTASY,
+    SCI_FI,
+    ACTION,
+    ADVENTURE
 
 }
