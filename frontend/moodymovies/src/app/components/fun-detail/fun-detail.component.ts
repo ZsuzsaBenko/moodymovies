@@ -19,11 +19,12 @@ export class FunDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.router.snapshot);
     if (this.router.snapshot.url[0].path === 'random-surprise') {
       this.chosenFun = this.funService.getSurprise();
-    } else if (this.router.snapshot.url[0].path === 'random-fun') {
-      // this.chosenFun = this.funService.getProfile();
+    } else if (this.router.snapshot.url[0].path === 'questionnaire') {
+      this.chosenFun = this.funService.getProfile();
+    } else {
+      this.chosenFun = history.state;
     }
 
     this.trailerUrl = this.getSafeUrl(this.chosenFun.trailer);

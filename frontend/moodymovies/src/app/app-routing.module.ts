@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'random-profile', component: FunDetailComponent},
   {path: 'questionnaire', component: QuestionnaireComponent},
   {path: 'all', component: FunListComponent},
-  {path: 'all/:funType', component: FunListComponent},
+  {path: 'all/:funType', component: FunListComponent, pathMatch: 'full'},
   {path: ':id', component: FunDetailComponent}
 ];
 
