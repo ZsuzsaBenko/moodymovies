@@ -1,1 +1,6 @@
-<p>fun-list works!</p>
+<div class="fun-list-container" *ngFor="let fun of funList, let i = index">
+  <div [id]="i">
+    <img [src]="fun.poster" alt="{{ fun.title }}">
+    <a [routerLink]="['/', i]" [state]="fun"><span>{{ fun.title }}</span></a>
+  </div>
+</div>
