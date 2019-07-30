@@ -14,6 +14,5 @@ public class Questionnaire {
     private int gender;
     private int watchingAlone;
     private Mood mood;
-    private Genre genre;
 
 }
