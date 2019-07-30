@@ -1,13 +1,10 @@
 package com.codecool.moodservice.service;
 
-import com.codecool.moodservice.model.Genre;
 import com.codecool.moodservice.model.ScreenFun;
 import com.codecool.moodservice.model.ServiceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
 
 @Service
 public class ServiceCaller {
