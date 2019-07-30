@@ -1,1 +1,30 @@
-<p>fun-detail works!</p>
+<div>
+  <h2>{{ chosenFun.title }}</h2>
+  <div class="fun-container">
+    <div class="poster">
+      <img [src]="chosenFun.poster" alt="{{ chosenFun.title }}">
+    </div>
+    <div class="details">
+      <p class="genre-runtime">
+        <span>Genre: {{ chosenFun.genre }}</span>
+        <span>Runtime: {{ chosenFun.runtime }}</span>
+      </p>
+      <p class="year">Year: {{ chosenFun.year }}</p>
+      <p class="director">Director: {{ chosenFun.staff[0] }}</p>
+      <p class="producer">Producer: {{ chosenFun.staff[1] }}</p>
+      <p class="actors">Actors:
+        <span *ngFor="let actor of chosenFun.actors, let i = index">
+          <span *ngIf="i < chosenFun.actors.length - 1">{{ actor }}, </span>
+          <span *ngIf="i === chosenFun.actors.length - 1">{{ actor }}</span>
+        </span>
+      </p>
+    </div>
+    <div class="plot">{{ chosenFun.plot }}</div>
+    <div class="iframe-container">
+      <iframe [src]="trailerUrl" allow="accelerometer; autoplay; encrypted-media;
+        gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+</div>
