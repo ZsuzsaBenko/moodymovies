@@ -14,6 +14,7 @@ public class Questionnaire {
     private int partOfDay;
     private int gender;
     private int watchingAlone;
+    private int age;
     private Mood mood;
     private Horoscope horoscope;
 

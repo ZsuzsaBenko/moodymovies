@@ -4,7 +4,8 @@ export class ScreenFun {
   year: number;
   genre: string;
   rating: number;
-  staff: string[];
+  director: string;
+  producer: string;
   actors: string[];
   plot: string;
   runtime: number;

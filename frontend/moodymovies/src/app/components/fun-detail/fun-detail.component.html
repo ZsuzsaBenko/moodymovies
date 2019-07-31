@@ -10,8 +10,8 @@
         <span>Runtime: {{ chosenFun.runtime }}</span>
       </p>
       <p class="year">Year: {{ chosenFun.year }}</p>
-      <p class="director">Director: {{ chosenFun.staff[0] }}</p>
-      <p class="producer">Producer: {{ chosenFun.staff[1] }}</p>
+      <p class="director">Director: {{ chosenFun.director }}</p>
+      <p class="producer">Producer: {{ chosenFun.producer }}</p>
       <p class="actors">Actors:
         <span *ngFor="let actor of chosenFun.actors, let i = index">
           <span *ngIf="i < chosenFun.actors.length - 1">{{ actor }}, </span>
