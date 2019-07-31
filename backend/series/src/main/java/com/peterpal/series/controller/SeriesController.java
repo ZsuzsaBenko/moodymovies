@@ -1,10 +1,9 @@
-package com.peterpal.demo.controller;
+package com.peterpal.series.controller;
 
-import com.netflix.discovery.converters.Auto;
-import com.peterpal.demo.model.Questionnaire;
-import com.peterpal.demo.model.ScreenFun;
-import com.peterpal.demo.repository.SeriesRepository;
-import com.peterpal.demo.service.SeriesService;
+import com.peterpal.series.model.Questionnaire;
+import com.peterpal.series.model.ScreenFun;
+import com.peterpal.series.repository.SeriesRepository;
+import com.peterpal.series.service.SeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;

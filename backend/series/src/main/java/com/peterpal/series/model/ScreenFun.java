@@ -1,4 +1,4 @@
-package com.peterpal.demo.model;
+package com.peterpal.series.model;
 
 import lombok.*;
 

@@ -1,8 +1,8 @@
-package com.peterpal.demo;
+package com.peterpal.series;
 
-import com.peterpal.demo.model.Genre;
-import com.peterpal.demo.model.ScreenFun;
-import com.peterpal.demo.repository.SeriesRepository;
+import com.peterpal.series.model.Genre;
+import com.peterpal.series.model.ScreenFun;
+import com.peterpal.series.repository.SeriesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,13 +13,13 @@ import java.util.Arrays;
 
 
 @SpringBootApplication
-public class DemoApplication {
+public class SeriesApplication {
 
     @Autowired
     SeriesRepository seriesRepository;
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(SeriesApplication.class, args);
     }
 
 

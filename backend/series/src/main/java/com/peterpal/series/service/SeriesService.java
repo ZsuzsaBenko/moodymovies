@@ -1,4 +1,4 @@
-package com.peterpal.demo.service;
+package com.peterpal.series.service;
 
 import org.springframework.stereotype.Service;
 
