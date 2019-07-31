@@ -17,7 +17,8 @@ export class FunService {
     test1.title = 'Avatar';
     test1.year = 2015;
     test1.rating = 8.8;
-    test1.staff = ['James Cameron'];
+    test1.director = 'somebody';
+    test1.producer = 'someone else';
     test1.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test1.plot = 'This is the plot of this movie.';
     test1.runtime = 150;
@@ -26,14 +27,15 @@ export class FunService {
     return test1;
   }
 
-  getProfile() {
+  getProfile(questionnaire) {
     const test1 = new ScreenFun();
     test1.funType = 'movie';
     test1.genre = 'horror';
     test1.title = 'Sleepy Hollow';
     test1.year = 2010;
     test1.rating = 9.6;
-    test1.staff = ['somebody', 'somebody else'];
+    test1.director = 'somebody';
+    test1.producer = 'someone else';
     test1.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test1.plot = 'This is the plot of this movie.';
     test1.runtime = 125;
@@ -50,7 +52,8 @@ export class FunService {
     test1.title = 'Avatar';
     test1.year = 2015;
     test1.rating = 8.8;
-    test1.staff = ['James Cameron'];
+    test1.director = 'somebody';
+    test1.producer = 'someone else';
     test1.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test1.plot = 'This is the plot of this movie.';
     test1.runtime = 150;
@@ -63,7 +66,8 @@ export class FunService {
     test2.title = 'Sleepy Hollow';
     test2.year = 1999;
     test2.rating = 9.6;
-    test2.staff = ['somebody', 'somebody else'];
+    test2.director = 'somebody';
+    test2.producer = 'someone else';
     test2.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test2.plot = 'This is the plot of this movie.';
     test2.runtime = 125;
@@ -76,7 +80,8 @@ export class FunService {
     test3.title = 'Fifty First Dates';
     test3.year = 2005;
     test3.rating = 8.7;
-    test3.staff = ['James Cameron'];
+    test3.director = 'somebody';
+    test3.producer = 'someone else';
     test3.actors = ['Jane Doe', 'John Doe'];
     test3.plot = 'This is the plot of this game.';
     test3.runtime = 150;
@@ -89,7 +94,8 @@ export class FunService {
     test4.title = 'The Lord Of The Rings - The Fellowship of the Ring';
     test4.year = 2004;
     test4.rating = 9.7;
-    test4.staff = ['someone', 'anyone'];
+    test4.director = 'somebody';
+    test4.producer = 'someone else';
     test4.actors = ['Jane Doe', 'John Doe'];
     test4.plot = 'This is the plot of this movie.';
     test4.runtime = 200;
@@ -106,7 +112,8 @@ export class FunService {
     test1.title = 'Avatar';
     test1.year = 2015;
     test1.rating = 8.8;
-    test1.staff = ['James Cameron'];
+    test1.director = 'somebody';
+    test1.producer = 'someone else';
     test1.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test1.plot = 'This is the plot of this movie.';
     test1.runtime = 150;
@@ -119,7 +126,8 @@ export class FunService {
     test2.title = 'Sleepy Hollow';
     test2.year = 1999;
     test2.rating = 9.6;
-    test2.staff = ['somebody', 'somebody else'];
+    test2.director = 'somebody';
+    test2.producer = 'someone else';
     test2.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test2.plot = 'This is the plot of this movie.';
     test2.runtime = 125;
@@ -137,7 +145,8 @@ export class FunService {
     test3.title = 'Fifty First Dates';
     test3.year = 2005;
     test3.rating = 8.7;
-    test3.staff = ['James Cameron'];
+    test3.director = 'somebody';
+    test3.producer = 'someone else';
     test3.actors = ['Jane Doe', 'John Doe'];
     test3.plot = 'This is the plot of this game.';
     test3.runtime = 150;
@@ -150,7 +159,8 @@ export class FunService {
     test4.title = 'The Lord Of The Rings - The Fellowship of the Ring';
     test4.year = 2004;
     test4.rating = 9.7;
-    test4.staff = ['someone', 'anyone'];
+    test4.director = 'somebody';
+    test4.producer = 'someone else';
     test4.actors = ['Jane Doe', 'John Doe'];
     test4.plot = 'This is the plot of this movie.';
     test4.runtime = 200;

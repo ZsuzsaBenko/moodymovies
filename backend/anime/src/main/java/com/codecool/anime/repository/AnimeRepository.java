@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface AnimeRepository extends JpaRepository<ScreenFun, Long> {
 
-    public List<ScreenFun> getAllByOrderByTitle();
+    List<ScreenFun> getAllByOrderByTitle();
 }

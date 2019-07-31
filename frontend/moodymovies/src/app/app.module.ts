@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { FunListComponent } from './components/fun-list/fun-list.component';
 import { FunDetailComponent } from './components/fun-detail/fun-detail.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FunDetailComponent } from './components/fun-detail/fun-detail.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
