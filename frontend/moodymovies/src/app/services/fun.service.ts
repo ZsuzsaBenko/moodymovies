@@ -17,7 +17,8 @@ export class FunService {
     test1.title = 'Avatar';
     test1.year = 2015;
     test1.rating = 8.8;
-    test1.staff = ['James Cameron'];
+    test1.director = 'somebody';
+    test1.producer = 'someone else';
     test1.actors = ['Jane Doe', 'John Doe', 'Jack Smith'];
     test1.plot = 'This is the plot of this movie.';
     test1.runtime = 150;
