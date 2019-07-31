@@ -10,6 +10,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.Random;
+
 @SpringBootApplication
 @EnableSwagger2
 @EnableEurekaClient
@@ -26,6 +28,11 @@ public class MoviesApplication {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.ant("/movies/**"))
                 .build();
+    }
+
+    @Bean
+    public Random random() {
+        return new Random();
     }
 
 }
