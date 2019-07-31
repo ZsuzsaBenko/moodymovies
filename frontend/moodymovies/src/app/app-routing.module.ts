@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'questionnaire', component: QuestionnaireComponent},
   {path: 'all/:funType', component: FunListComponent, pathMatch: 'full'},
   {path: 'all', component: FunListComponent, pathMatch: 'full'},
-  {path: ':id', component: FunDetailComponent}
+  {path: ':funType/:id', component: FunDetailComponent}
 ];
 
 @NgModule({

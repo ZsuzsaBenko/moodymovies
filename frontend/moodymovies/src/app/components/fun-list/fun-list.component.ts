@@ -26,4 +26,7 @@ export class FunListComponent implements OnInit {
     }
   }
 
+  filterFunList(category) {
+    return this.funList.filter(fun => fun.funType === category);
+  }
 }

@@ -1,6 +1,46 @@
-<div class="fun-list-container" *ngFor="let fun of funList, let i = index">
-  <div [id]="i">
-    <img [src]="fun.poster" alt="{{ fun.title }}">
-    <a [routerLink]="['/', i]" [state]="fun"><span>{{ fun.title }}</span></a>
+<div class="fun-list-container">
+  <h3>Anime</h3>
+  <div class="fun-list">
+    <div *ngFor="let fun of filterFunList('anime'), let i = index">
+      <div class="fun-item" [id]="i">
+        <p>{{ fun.title }}</p>
+        <a [routerLink]="['/', fun.funType, i]" [state]="fun">
+          <img [src]="['../../../assets/' + fun.poster]" alt="{{ fun.title }}">
+        </a>
+      </div>
+    </div>
+  </div>
+  <h3>Game</h3>
+  <div class="fun-list">
+    <div *ngFor="let fun of filterFunList('game'), let i = index">
+      <div class="fun-item" [id]="i">
+        <p>{{ fun.title }}</p>
+        <a [routerLink]="['/', fun.funType, i]" [state]="fun">
+          <img [src]="['../../../assets/' + fun.poster]" alt="{{ fun.title }}">
+        </a>
+      </div>
+    </div>
+  </div>
+  <h3>Movie</h3>
+  <div class="fun-list">
+    <div *ngFor="let fun of filterFunList('movie'), let i = index">
+      <div class="fun-item"  [id]="i">
+        <p>{{ fun.title }}</p>
+        <a [routerLink]="['/', fun.funType, i]" [state]="fun">
+          <img [src]="['../../../assets/' + fun.poster]" alt="{{ fun.title }}">
+        </a>
+      </div>
+    </div>
+  </div>
+  <h3>Series</h3>
+  <div class="fun-list">
+    <div *ngFor="let fun of filterFunList('series'), let i = index">
+      <div class="fun-item" [id]="i">
+        <p>{{ fun.title }}</p>
+        <a [routerLink]="['/', fun.funType, i]" [state]="fun">
+          <img [src]="['../../../assets/' + fun.poster]" alt="{{ fun.title }}">
+        </a>
+      </div>
+    </div>
   </div>
 </div>
