@@ -22,8 +22,8 @@ public class MoodController {
     }
 
     @GetMapping("/checkbox/{serviceType}")
-    public List<ScreenFun> getAllFromChosenCategory(@PathVariable("serviceType") ServiceType serviceType) {
-        return this.moodService.getAllFromChosenCategory(serviceType);
+    public List<ScreenFun> getAllFromChosenCategory(@PathVariable String serviceType) {
+        return this.moodService.getAllFromChosenCategory(ServiceType.valueOf(serviceType.toUpperCase()));
     }
 
     @GetMapping("/one-from-each")
