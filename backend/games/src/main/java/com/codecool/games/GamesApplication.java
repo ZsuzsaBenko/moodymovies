@@ -42,17 +42,4 @@ public class GamesApplication {
                 .paths(PathSelectors.any())
                 .build();
     }
-
-//    @Bean
-//    @Profile("production")
-//    public CommandLineRunner init() {
-//        return args -> {
-//
-//            ScreenFun actionGame1 = ScreenFun.builder()
-//                    .funType("game")
-//
-//                    .actors()
-//                    .build();
-//        };
-//    }
 }
