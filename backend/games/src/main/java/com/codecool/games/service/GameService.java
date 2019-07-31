@@ -27,7 +27,7 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public List<ScreenFun> getFilteredGames(Questionnaire questionnaire) {
-        return gameRepository.getScreenFunsByGenre(Genre.ACTION);
+    public ScreenFun getFilteredGame(Questionnaire questionnaire) {
+        return gameRepository.getFirstByGenre(Genre.ACTION);
     }
 }

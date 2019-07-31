@@ -1,5 +1,7 @@
 package com.codecool.games;
 
+import com.codecool.games.repository.GameRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -19,8 +21,20 @@ import java.util.Random;
 @EnableEurekaClient
 public class GamesApplication {
 
+    @Autowired
+    private GameRepository repository;
+
     public static void main(String[] args) {
         SpringApplication.run(GamesApplication.class, args);
+    }
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
     }
 
     @Bean
@@ -34,12 +48,57 @@ public class GamesApplication {
         return new Random();
     }
 
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build();
-    }
+//    @Bean
+//    @Profile("production")
+//    public CommandLineRunner init() {
+//        return args -> {
+//
+//            ScreenFun action1 = ScreenFun.builder()
+//                    .funType("game")
+//                    .genre(Genre.ACTION)
+//                    .title("")
+//                    .year()
+//                    .director()
+//                    .producer()
+//                    .actors(Arrays.asList())
+//                    .runtime()
+//                    .rating()
+//                    .plot()
+//                    .trailer()
+//                    .poster()
+//                    .build();
+//
+//            ScreenFun action2 = ScreenFun.builder()
+//                    .funType("game")
+//                    .genre(Genre.ACTION)
+//                    .title("")
+//                    .year()
+//                    .director()
+//                    .producer()
+//                    .actors(Arrays.asList())
+//                    .runtime()
+//                    .rating()
+//                    .plot()
+//                    .trailer()
+//                    .poster()
+//                    .build();
+//
+//            ScreenFun action3 = ScreenFun.builder()
+//                    .funType("game")
+//                    .genre(Genre.ACTION)
+//                    .title("")
+//                    .year()
+//                    .director()
+//                    .producer()
+//                    .actors(Arrays.asList())
+//                    .runtime()
+//                    .rating()
+//                    .plot()
+//                    .trailer()
+//                    .poster()
+//                    .build();
+//
+//            repository.saveAll(Arrays.asList(action1, action2, action3))
+//        };
+//    }
 }
