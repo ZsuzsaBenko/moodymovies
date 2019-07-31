@@ -17,13 +17,17 @@ public class ScreenFun {
 
     private String title;
 
-    private int rating;
+    private String funType;
+
+    private double rating;
 
     private Genre genre;
 
-    private List staff;
+    private String director;
 
-    private List actors;
+    private String producer;
+
+    private List<String> actors;
 
     private int year;
 
@@ -33,6 +37,6 @@ public class ScreenFun {
 
     private String poster;
 
-    private String link;
+    private String trailer;
 
 }
