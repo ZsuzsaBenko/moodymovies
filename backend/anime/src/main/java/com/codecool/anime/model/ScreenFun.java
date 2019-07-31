@@ -26,19 +26,21 @@ public class ScreenFun {
     @NotNull
     private String funType;
 
-    private int rating;
+    private double rating;
 
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
 
-    @ElementCollection
-    private List<String> staff;
+    private String director;
+
+    private String producer;
 
     @ElementCollection
     private List<String> actors;
 
     private int year;
 
+    @Column(columnDefinition = "LONGTEXT", length = 1024)
     private String plot;
 
     private int runtime;
