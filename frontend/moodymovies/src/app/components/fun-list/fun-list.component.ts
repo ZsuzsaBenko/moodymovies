@@ -16,7 +16,7 @@ export class FunListComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.router.snapshot.url[0].path.endsWith('all') && this.router.snapshot.params.funType !== null) {
+    if (this.router.snapshot.url[0].path.endsWith('all') && this.router.snapshot.params.funType == null) {
       this.funService.getAll().subscribe( response => this.funList = response);
     } else if (this.router.snapshot.url[0].path === 'random-fun') {
       this.funService.getOneRandomFromEachCategory().subscribe(response => this.funList = response);
