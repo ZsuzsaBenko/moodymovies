@@ -20,7 +20,7 @@ public class GameService {
     private Random random;
 
     public ScreenFun getRandomGame() {
-        return gameRepository.getScreenFunsById(random.nextInt(20));
+        return gameRepository.getScreenFunsById(random.nextInt(17)+1);
     }
 
     public List<ScreenFun> getAllGames() {

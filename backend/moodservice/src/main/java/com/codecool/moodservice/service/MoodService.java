@@ -23,8 +23,7 @@ public class MoodService {
     public ScreenFun getRandomItem() {
         ServiceType randomService = ServiceType.values()[this.random.nextInt(ServiceType.values().length)];
 
-        // TODO change ServiceType.ANIME to randomService when every service is done
-        ScreenFun result = this.serviceCaller.getOneItem(ServiceType.ANIME);
+        ScreenFun result = this.serviceCaller.getOneItem(randomService);
         return result;
     }
 
@@ -32,7 +31,6 @@ public class MoodService {
         List<ScreenFun> everyItem = new ArrayList<>();
         List<ServiceType> serviceTypes = Arrays.asList(ServiceType.values());
         serviceTypes.forEach(serviceType -> everyItem.add(this.serviceCaller.getItemBasedOnQuestionnaire(serviceType, questionnaire)));
-
         ScreenFun result = everyItem.get(random.nextInt(everyItem.size()));
         return result;
     }
@@ -44,7 +42,6 @@ public class MoodService {
     public List<ScreenFun> getAllItems() {
         List<ScreenFun> everyItem = new ArrayList<>();
         List<ServiceType> serviceTypes = Arrays.asList(ServiceType.values());
-
         serviceTypes.forEach(serviceType -> everyItem.addAll(this.serviceCaller.getAllItems(serviceType)));
 
         return everyItem;
