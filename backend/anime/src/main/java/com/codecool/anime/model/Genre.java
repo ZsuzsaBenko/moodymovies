@@ -9,7 +9,6 @@ public enum Genre {
     HORROR,
     THRILLER,
     DOCUMENTARY,
-    ANIMATED,
     FANTASY,
     SCI_FI,
     ACTION,
