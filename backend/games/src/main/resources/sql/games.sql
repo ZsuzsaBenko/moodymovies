@@ -86,7 +86,8 @@ values (16, 'Hidden Path Entertainment', 'game', 'ROMANCE',
         'Valve Corporation', 94.0, 500000, 'CS:GO', 'https://www.youtube.com/embed/edYCtaNueQY', 2012);
 INSERT INTO SCREEN_FUN(ID, DIRECTOR, FUN_TYPE, GENRE, PLOT, POSTER, PRODUCER, RATING, RUNTIME, TITLE, TRAILER, YEAR)
 values (17, 'Tom Hall', 'game', 'ROMANCE',
-        'Players assume the role of a space marine, popularly known as "Doomguy", fighting his way through hordes of invading demons from Hell.', 'doom.jpg',
+        'Players assume the role of a space marine, popularly known as "Doomguy", fighting his way through hordes of invading demons from Hell.',
+        'doom.jpg',
         'id Software', 16.0, 500, 'DOOM', 'https://www.youtube.com/embed/BkaC1-QoraY', 1993);
 
 
