@@ -21,24 +21,29 @@ public class ScreenFun {
     @NotNull
     private String title;
 
+    @NotNull
+    private String funType;
+
     private double rating;
 
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
 
-    @ElementCollection
-    private List<String> staff;
+    private String director;
+
+    private String producer;
 
     @ElementCollection
     private List<String> actors;
 
     private int year;
 
+    @Column(length = 1024)
     private String plot;
 
     private int runtime;
 
     private String poster;
 
-    private String link;
+    private String trailer;
 }

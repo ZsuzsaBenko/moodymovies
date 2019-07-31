@@ -2,7 +2,8 @@ package com.codecool.moodservice.model;
 
 public enum ServiceType {
     ANIME("http://anime/anime"),
-    MOVIES("http://movies/movies");
+    MOVIES("http://movies/movies"),
+    GAMES("http://games/games");
 
 
     public final String baseUrl;
@@ -12,7 +13,6 @@ public enum ServiceType {
         this.baseUrl = url;
     }
 
-    //    GAME("http://games/games"),
 //    SERIES("http://series/series");
 }
 
