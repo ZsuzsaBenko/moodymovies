@@ -1,4 +1,18 @@
 package com.codecool.games.model;
 
-public class Horoscope {
+public enum Horoscope {
+
+    AQUARIUS,
+    PISCES,
+    ARIES,
+    TAURUS,
+    GEMINI,
+    CANCER,
+    LEO,
+    VIRGO,
+    LIBRA,
+    SCORPIO,
+    SAGITTARIUS,
+    CAPRICORN
+
 }
