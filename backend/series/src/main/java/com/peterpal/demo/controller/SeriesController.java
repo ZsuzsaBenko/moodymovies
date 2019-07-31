@@ -21,4 +21,9 @@ public class SeriesController {
     public List<ScreenFun> getAllScreenFun() {
         return seriesRepository.findAll();
     }
+
+    @GetMapping("/order")
+    public List<ScreenFun> getOrderByRating() {
+        return seriesRepository.findByOrderByRatingAsc();
+    }
 }
