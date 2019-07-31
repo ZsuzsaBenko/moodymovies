@@ -1,5 +1,6 @@
 package com.codecool.anime.service;
 
+import com.codecool.anime.model.Genre;
 import com.codecool.anime.model.Questionnaire;
 import com.codecool.anime.model.ScreenFun;
 import com.codecool.anime.repository.AnimeRepository;
@@ -7,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -33,8 +36,40 @@ public class AnimeService {
     }
 
     public ScreenFun getOneBasedOnQuestionnaire(Questionnaire questionnaire) {
+        List<Genre> genres = setGenre(questionnaire);
+        List<ScreenFun> results = new ArrayList<>();
+        double rating = 7;
 
+        if (questionnaire.getMasochist() == 1) {
+            assert genres != null;
+            for (Genre genre: genres) {
+                results.addAll(repository.getScreenFunsByRatingLessThanEqualAndGenre(rating,genre));
+            }
+        } else {
+            assert genres != null;
+            for (Genre genre: genres) {
+                results.addAll(repository.getScreenFunsByRatingGreaterThanAndGenre(rating,genre));
+            }
+        }
 
+        return genres.size() > 0 ? results.get(random.nextInt(results.size())): null;
+    }
+
+    private List<Genre> setGenre(Questionnaire questionnaire) {
+        switch (questionnaire.getMood()) {
+            case CRY:
+                return Arrays.asList(Genre.DRAMA);
+            case LAUGH:
+                return Arrays.asList(Genre.COMEDY, Genre.ROMANCE);
+            case THINK:
+                return Arrays.asList(Genre.CRIME);
+            case BE_SCARED:
+                return Arrays.asList(Genre.HORROR, Genre.THRILLER);
+            case LEARN:
+                return Arrays.asList(Genre.DOCUMENTARY);
+            case BE_THRILLED:
+                return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.ADVENTURE, Genre.FANTASY, Genre.SCI_FI);
+        }
         return null;
     }
 }
