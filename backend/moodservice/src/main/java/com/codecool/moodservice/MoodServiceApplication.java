@@ -12,6 +12,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.Random;
+
 @SpringBootApplication
 @EnableEurekaClient
 @EnableSwagger2
@@ -36,5 +38,8 @@ public class MoodServiceApplication {
         return new RestTemplate();
     }
 
-
+    @Bean
+    public Random random() {
+        return new Random();
+    }
 }
