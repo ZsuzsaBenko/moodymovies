@@ -2,7 +2,7 @@
   <h2>{{ chosenFun.title }}</h2>
   <div class="fun-container">
     <div class="poster">
-      <img [src]="chosenFun.poster" alt="{{ chosenFun.title }}">
+      <img [src]="['../../../assets/' + chosenFun.poster]" alt="{{ chosenFun.title }}">
     </div>
     <div class="details">
       <p class="genre-runtime">

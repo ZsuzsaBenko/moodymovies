@@ -255,7 +255,7 @@ public class GamesApplication {
 
             ScreenFun scifi1 = ScreenFun.builder()
                     .funType("game")
-                    .genre(Genre.SCIFI)
+                    .genre(Genre.SCI_FI)
                     .director("William Westwater")
                     .plot("A science fiction first-person shooter video game takes place in the year 2231.")
                     .poster("alien.jpg")
@@ -270,7 +270,7 @@ public class GamesApplication {
 
             ScreenFun scifi2 = ScreenFun.builder()
                     .funType("game")
-                    .genre(Genre.SCIFI)
+                    .genre(Genre.SCI_FI)
                     .director("Steve Raffel")
                     .plot("First- and third-person shooter sci-fi video game set in the Star Wars universe.")
                     .poster("starwars.jpg")

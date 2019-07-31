@@ -5,7 +5,7 @@ public enum Genre {
     HORROR,
     DOCUMENTARY,
     DRAMA,
-    SCIFI,
+    SCI_FI,
     ACTION,
     ANIMATED,
     ROMANCE,
