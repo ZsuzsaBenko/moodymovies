@@ -49,4 +49,22 @@ public class ScreenFun {
 
     private String trailer;
 
+    @Override
+    public String toString() {
+        return "ScreenFun{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", funType='" + funType + '\'' +
+                ", rating=" + rating +
+                ", genre=" + genre +
+                ", director='" + director + '\'' +
+                ", producer='" + producer + '\'' +
+                ", actors=" + actors +
+                ", year=" + year +
+                ", plot='" + plot + '\'' +
+                ", runtime=" + runtime +
+                ", poster='" + poster + '\'' +
+                ", trailer='" + trailer + '\'' +
+                '}';
+    }
 }
