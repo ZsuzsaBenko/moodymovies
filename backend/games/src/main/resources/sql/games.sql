@@ -12,7 +12,7 @@ VALUES (2, 'game', 'ACTION',
 INSERT INTO SCREEN_FUN(ID, FUN_TYPE, GENRE, PLOT, POSTER, RATING, RUNTIME, TITLE, TRAILER, YEAR, DIRECTOR, PRODUCER)
 VALUES (3, 'game', 'ACTION',
         'Atari 2600 game made by Mystique in 1982 that is widely considered offensive due to its plot involving the apparent rape of a Native American woman.',
-        'gtav.png', 32.0, 20, 'Custers Revenge', 'https://www.youtube.com/embed/hvoD7ehZPcM', 1982, 'Mystique',
+        'custersrevenge.jpg', 32.0, 20, 'Custers Revenge', 'https://www.youtube.com/embed/hvoD7ehZPcM', 1982, 'Mystique',
         'Mystique');
 
 -- Comedy games
