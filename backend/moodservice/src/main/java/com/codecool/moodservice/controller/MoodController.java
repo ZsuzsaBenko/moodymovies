@@ -18,14 +18,9 @@ public class MoodController {
     @Autowired
     private MoodService moodService;
 
-    @Autowired
-    private Random random;
-
     @GetMapping("/random-choice")
     public ScreenFun getRandomItem() {
-        ServiceType randomService = ServiceType.values()[this.random.nextInt(ServiceType.values().length)];
-        System.out.println(randomService);
-        return this.moodService.getRandomItem(ServiceType.ANIME);
+        return this.moodService.getRandomItem();
     }
 
     @GetMapping("/checkbox")
