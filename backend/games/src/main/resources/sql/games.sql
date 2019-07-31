@@ -12,7 +12,7 @@ VALUES (2, 'game', 'ACTION',
 INSERT INTO SCREEN_FUN(ID, FUN_TYPE, GENRE, PLOT, POSTER, RATING, RUNTIME, TITLE, TRAILER, YEAR, DIRECTOR, PRODUCER)
 VALUES (3, 'game', 'ACTION',
         'Atari 2600 game made by Mystique in 1982 that is widely considered offensive due to its plot involving the apparent rape of a Native American woman.',
-        'gtav.png', 32.0, 20, 'Custers Revenge', 'https://www.youtube.com/embed/hvoD7ehZPcM', 1982, 'Mystique',
+        'custersrevenge.jpg', 32.0, 20, 'Custers Revenge', 'https://www.youtube.com/embed/hvoD7ehZPcM', 1982, 'Mystique',
         'Mystique');
 
 -- Comedy games
@@ -86,7 +86,8 @@ values (16, 'Hidden Path Entertainment', 'game', 'ROMANCE',
         'Valve Corporation', 94.0, 500000, 'CS:GO', 'https://www.youtube.com/embed/edYCtaNueQY', 2012);
 INSERT INTO SCREEN_FUN(ID, DIRECTOR, FUN_TYPE, GENRE, PLOT, POSTER, PRODUCER, RATING, RUNTIME, TITLE, TRAILER, YEAR)
 values (17, 'Tom Hall', 'game', 'ROMANCE',
-        'Players assume the role of a space marine, popularly known as "Doomguy", fighting his way through hordes of invading demons from Hell.', 'doom.jpg',
+        'Players assume the role of a space marine, popularly known as "Doomguy", fighting his way through hordes of invading demons from Hell.',
+        'doom.jpg',
         'id Software', 16.0, 500, 'DOOM', 'https://www.youtube.com/embed/BkaC1-QoraY', 1993);
 
 
