@@ -2,6 +2,7 @@ package com.codecool.moodservice.controller;
 
 import com.codecool.moodservice.model.Questionnaire;
 import com.codecool.moodservice.model.ScreenFun;
+import com.codecool.moodservice.model.ServiceType;
 import com.codecool.moodservice.service.MoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,23 +17,23 @@ public class MoodController {
     private MoodService moodService;
 
     @GetMapping("/random-choice")
-    public ScreenFun getRandomItem() {
-        return this.moodService.getRandomItem();
+    public ScreenFun getRandomItem(ServiceType serviceType) {
+        return this.moodService.getRandomItem(ServiceType.ANIME);
     }
 
     @GetMapping("/checkbox")
-    public List<ScreenFun> getRandomItemByCheckBox() {
+    public List<ScreenFun> getAllFromChosenCategory() {
         return this.moodService.getRandomFromEverywhere();
     }
 
-    @GetMapping("/one-from-all")
+    @GetMapping("/one-from-each")
     public List<ScreenFun> getOneItemFromEveryType() {
         return this.moodService.getOneItemFromEveryType();
     }
 
     @GetMapping("/all")
     public List<ScreenFun> getAllItems() {
-        return this.moodService.getAllItems();
+        return this.moodService.getAllItems(ServiceType.ANIME);
     }
 
     @PostMapping("/questionnaire")
