@@ -34,19 +34,22 @@ public class DemoApplication {
 
             seriesRepository.save(ScreenFun.builder().title("Game of Thrones").funType("Series").rating(9.5).genre(Genre.FANTASY)
                     .director("N/A").producer("N/A")
-                    .year(2011).plot("Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.").runtime(57).poster("https://m.media-amazon.com/images/M/MV5BMjA5NzA5NjMwNl5BMl5BanBnXkFtZTgwNjg2OTk2NzM@._V1_SX300.jpg")
+                    .year(2011).plot("Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.")
+                    .runtime(57).poster("got.jpg")
                     .actors(Arrays.asList("Peter Dinklage", "Lena Headey", "Emilia Clarke", "Kit Harington"))
                     .trailer("").build());
 
             seriesRepository.save(ScreenFun.builder().title("Airwolf").funType("Series").rating(6.8).genre(Genre.ADVENTURE)
                     .director("N/A").producer("N/A")
-                    .year(1984).plot("As part of a deal with an intelligence agency to look for his missing brother, a renegade pilot goes on missions with an advanced battle helicopter.").runtime(60).poster("https://m.media-amazon.com/images/M/MV5BODYyY2EwNTYtMmY3Mi00MWRkLWJlYjEtNmJhMmIzNDU0ZGE4XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg")
+                    .year(1984).plot("As part of a deal with an intelligence agency to look for his missing brother, a renegade pilot goes on missions with an advanced battle helicopter.")
+                    .runtime(60).poster("https://m.media-amazon.com/images/M/MV5BODYyY2EwNTYtMmY3Mi00MWRkLWJlYjEtNmJhMmIzNDU0ZGE4XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg")
                     .actors(Arrays.asList("Jan-Michael Vincent", "Alex Cord", "Ernest Borgnine", "Jean Bruce Scott"))
                     .trailer("").build());
 
             seriesRepository.save(ScreenFun.builder().title("Homeland").funType("Series").rating(8.3).genre(Genre.CRIME)
                     .director("N/A").producer("N/A")
-                    .year(2011).plot("A bipolar CIA operative becomes convinced a prisoner of war has been turned by al-Qaeda and is planning to carry out a terrorist attack on American soil.").runtime(55).poster("https://m.media-amazon.com/images/M/MV5BZjNiOTA4YTEtYmE0Ni00Mzg4LTg1OTgtNTE0YWE3YTc0MDVhXkEyXkFqcGdeQXVyNjc3OTUzNzM@._V1_SX300.jpg")
+                    .year(2011).plot("A bipolar CIA operative becomes convinced a prisoner of war has been turned by al-Qaeda and is planning to carry out a terrorist attack on American soil.")
+                    .runtime(55).poster("https://m.media-amazon.com/images/M/MV5BZjNiOTA4YTEtYmE0Ni00Mzg4LTg1OTgtNTE0YWE3YTc0MDVhXkEyXkFqcGdeQXVyNjc3OTUzNzM@._V1_SX300.jpg")
                     .actors(Arrays.asList("Claire Danes", "Mandy Patinkin", "Rupert Friend", "Maury Sterling"))
                     .trailer("").build());
 
