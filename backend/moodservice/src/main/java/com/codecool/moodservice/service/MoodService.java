@@ -6,6 +6,8 @@ import com.codecool.moodservice.model.ServiceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -23,15 +25,25 @@ public class MoodService {
         return null;
     }
 
-    public List<ScreenFun> getRandomFromEverywhere() {
+    public List<ScreenFun> getAllFromChosenCategory(ServiceType serviceType) {
         return null;
     }
 
-    public List<ScreenFun> getAllItems(ServiceType serviceType) {
-        return this.serviceCaller.getAllItems(serviceType);
+    public List<ScreenFun> getAllItems() {
+        List<ScreenFun> everyItem = new ArrayList<>();
+        List<ServiceType> serviceTypes = Arrays.asList(ServiceType.values());
+
+        serviceTypes.forEach(serviceType -> everyItem.addAll(this.serviceCaller.getAllItems(serviceType)));
+
+        return everyItem;
     }
 
     public List<ScreenFun> getOneItemFromEveryType() {
-        return null;
+        List<ScreenFun> everyItem = new ArrayList<>();
+        List<ServiceType> serviceTypes = Arrays.asList(ServiceType.values());
+
+        serviceTypes.forEach(serviceType -> everyItem.add(this.serviceCaller.getOneItem(serviceType)));
+
+        return everyItem;
     }
 }
