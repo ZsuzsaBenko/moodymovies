@@ -73,7 +73,6 @@ public class GameService {
             case BE_THRILLED:
                 return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.SCI_FI, Genre.HORROR);
         }
-
-        return null;
+        return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.COMEDY, Genre.DOCUMENTARY, Genre.DRAMA, Genre.HORROR, Genre.ROMANCE, Genre.SCI_FI);
     }
 }
