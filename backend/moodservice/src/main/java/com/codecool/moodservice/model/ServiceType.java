@@ -14,6 +14,5 @@ public enum ServiceType {
         this.baseUrl = url;
     }
 
-//    SERIES("http://series/series");
 }
 
