@@ -13,6 +13,5 @@ public enum Genre {
     SCI_FI,
     ACTION,
     ADVENTURE,
-    ANIMATED
 
 }

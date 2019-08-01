@@ -41,12 +41,10 @@ public class AnimeService {
         double rating = 7;
 
         if (questionnaire.getMasochist() == 1) {
-            assert genres != null;
             for (Genre genre: genres) {
                 results.addAll(repository.getScreenFunsByRatingLessThanEqualAndGenre(rating,genre));
             }
         } else {
-            assert genres != null;
             for (Genre genre: genres) {
                 results.addAll(repository.getScreenFunsByRatingGreaterThanAndGenre(rating,genre));
             }
@@ -68,8 +66,9 @@ public class AnimeService {
             case LEARN:
                 return Arrays.asList(Genre.DOCUMENTARY);
             case BE_THRILLED:
-                return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.ADVENTURE, Genre.FANTASY, Genre.SCI_FI);
+                return Arrays.asList(Genre.ACTION, Genre.ADVENTURE, Genre.FANTASY, Genre.SCI_FI);
+            default:
+                return Arrays.asList(Genre.ACTION);
         }
-        return null;
     }
 }
