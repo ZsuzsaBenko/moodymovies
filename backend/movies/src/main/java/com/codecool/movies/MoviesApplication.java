@@ -242,7 +242,7 @@ public class MoviesApplication {
                     .producer("Christopher Ball")
                     .plot("A man with short-term memory loss attempts to track down his wife's murderer.")
                     .poster("memento.jpg")
-                    .trailer("https://www.youtube.com/embed/0vS0E9bBSL0")
+                    .trailer("https://www.youtube.com/embed/HDWylEQSwFo")
                     .build();
 
             ScreenFun theButterflyEffect = ScreenFun.builder()
@@ -259,13 +259,6 @@ public class MoviesApplication {
                     .poster("butterfly-effect.jpg")
                     .trailer("https://www.youtube.com/embed/B8_dgqfPXFg")
                     .build();
-
-            this.movieRepository.saveAll(
-                    Arrays.asList(
-                            avatar, sleepyHollow, fiftyFirstDates, lotr, theRing, superSizeMe,
-                            fahrenheit, aKnightsTale, americanPie, bridgetJones, oceansEleven,
-                            girlWithDragonTattoo, memento, theButterflyEffect));
-
 
             ScreenFun hpSorcerersStone = ScreenFun.builder()
                     .funType("movie")
@@ -432,8 +425,6 @@ public class MoviesApplication {
                     .trailer("https://www.youtube.com/embed/3fdRKme00uI")
                     .build();
 
-            movieRepository.saveAll(Arrays.asList(vanHelsing, angelsDemons, gravity, kingsSpeech, mrMrsSmith, shrek, iceAge, starWarsPhantomMenace, loveActually, penguins, hpSorcerersStone));
-
             ScreenFun matrix = ScreenFun.builder()
                     .funType("movie")
                     .genre(Genre.SCI_FI)
@@ -580,6 +571,13 @@ public class MoviesApplication {
                     .trailer("https://www.youtube.com/embed/naQr0uTrH_s")
                     .build();
 
+            this.movieRepository.saveAll(
+                    Arrays.asList(
+                            avatar, sleepyHollow, fiftyFirstDates, lotr, theRing, superSizeMe,
+                            fahrenheit, aKnightsTale, americanPie, bridgetJones, oceansEleven,
+                            girlWithDragonTattoo, memento, theButterflyEffect));
+
+            movieRepository.saveAll(Arrays.asList(vanHelsing, angelsDemons, gravity, kingsSpeech, mrMrsSmith, shrek, iceAge, starWarsPhantomMenace, loveActually, penguins, hpSorcerersStone));
 
             movieRepository.saveAll(Arrays.asList(matrix, blackSwan, twilight, hangover, gladiator, sherlock, inception, taken, zootopia, ptcCBP));
 
