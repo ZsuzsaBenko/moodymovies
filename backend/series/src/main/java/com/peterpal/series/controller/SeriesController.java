@@ -38,9 +38,7 @@ public class SeriesController {
 
     @GetMapping("/random")
     public ScreenFun getRandom() {
-        List<ScreenFun> allScreenFun = seriesRepository.findAll();
-        int size = allScreenFun.size();
-        return allScreenFun.get(seriesService.randomPicker(size));
+        return seriesService.getRandomScreenFun();
     }
 
     @GetMapping("/questionnaire")
@@ -58,10 +56,9 @@ public class SeriesController {
 
     @GetMapping("/test")
     public List<ScreenFun> getTest() {
-        List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
-        List<ScreenFun> adventures = seriesRepository.findAllByGenre(Genre.ADVENTURE);
-        crimes.addAll(adventures);
-        return crimes;
+        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
+        return seriesService.getSecondHalfOfTheList(series);
+
     }
 
     @GetMapping("/adv")
