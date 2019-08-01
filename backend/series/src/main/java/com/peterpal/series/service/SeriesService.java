@@ -1,5 +1,6 @@
 package com.peterpal.series.service;
 
+import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.model.Genre;
 import com.peterpal.series.model.ScreenFun;
@@ -26,6 +27,10 @@ public class SeriesService {
 
     public int randomPicker(int size) {
         return random.nextInt(size);
+    }
+
+    public List<ScreenFun> getALl() {
+        return seriesRepository.findAll();
     }
 
 
@@ -87,6 +92,10 @@ public class SeriesService {
         forNigths.addAll(forNigths2);
         return forNigths;
     }
+
+//    public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
+//
+//    }
 
 
 

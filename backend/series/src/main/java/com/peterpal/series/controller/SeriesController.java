@@ -26,7 +26,7 @@ public class SeriesController {
 
     @GetMapping("/all")
     public List<ScreenFun> getAllScreenFun() {
-        return seriesRepository.findAll();
+        return seriesService.getALl();
     }
 
     @GetMapping("/order")
@@ -42,15 +42,19 @@ public class SeriesController {
 
     @GetMapping("/questionnaire")
     public List<ScreenFun> getPersonal(@RequestBody Questionnaire questionnaire) {
-        List<ScreenFun> chooseFor = seriesRepository.findAll();
-        if (questionnaire.getMasochist() == 1){
-            chooseFor = seriesRepository.findByOrderByRatingAsc();
-            return chooseFor.subList(0, 2);
+//        List<ScreenFun> chooseFor = seriesRepository.findAll();
+//        if (questionnaire.getMasochist() == 1){
+//            chooseFor = seriesRepository.findByOrderByRatingAsc();
+//            return chooseFor.subList(0, 2);
+//        }
+//        if(questionnaire.getMood() == Mood.BE_SCARED || questionnaire.getMood() == Mood.BE_THRILLED){
+//        }
+//
+//        return chooseFor;
+        if (questionnaire.getMood() == null) {
+            return seriesService.collectTheLaugh();
         }
-        if(questionnaire.getMood() == Mood.BE_SCARED || questionnaire.getMood() == Mood.BE_THRILLED){
-        }
-
-        return chooseFor;
+        return seriesService.collectTheCry();
     }
 
     @GetMapping("/test")
