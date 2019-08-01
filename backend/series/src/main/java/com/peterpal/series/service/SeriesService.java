@@ -4,12 +4,14 @@ import com.peterpal.series.model.Genre;
 import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.model.ScreenFun;
 import com.peterpal.series.repository.SeriesRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
+@Slf4j
 public class SeriesService {
 
     @Autowired
@@ -28,26 +30,27 @@ public class SeriesService {
 
     public ScreenFun getOneForQuestionnaire(Questionnaire questionnaire) {
         List<ScreenFun> results = new ArrayList<>();
-
-        if (questionnaire.getMasochist() == 1) {
-            results = getSortedScreenFun(questionnaire, results, 0, results.size() / 2);
-        } else {
-            results = getSortedScreenFun(questionnaire, results, results.size() / 2, results.size());
-        }
-
-        return results.get(random.nextInt(results.size()));
-
-    }
-
-    private List<ScreenFun> getSortedScreenFun(Questionnaire questionnaire, List<ScreenFun> results, int first, int last) {
         List<Genre> genres = setGenre(questionnaire);
 
         for (Genre genre : genres) {
             results.addAll(seriesRepository.findAllByGenre(genre));
         }
 
+        results = getSortedScreenFun(questionnaire, results);
+
+        return results.get(random.nextInt(results.size()));
+
+    }
+
+    private List<ScreenFun> getSortedScreenFun(Questionnaire questionnaire, List<ScreenFun> results) {
         results.sort(Comparator.comparing(ScreenFun::getRating));
-        results = results.subList(first, last);
+
+        if (questionnaire.getMasochist() == 1) {
+            results = results.subList(0, results.size() / 2);
+        } else {
+            results = results.subList(results.size() / 2, results.size());
+        }
+
         return results;
     }
 
