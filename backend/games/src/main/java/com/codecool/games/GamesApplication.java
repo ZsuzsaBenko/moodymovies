@@ -99,7 +99,7 @@ public class GamesApplication {
                     .runtime(20)
                     .rating(32)
                     .plot("Atari 2600 game made by Mystique in 1982 that is widely considered offensive due to its plot involving the apparent rape of a Native American woman.")
-                    .trailer("https://www.youtube.com/embed/hvoD7ehZPcM")
+                    .trailer("https://www.youtube.com/embed/qY2AqKCpGkk")
                     .poster("custersrevenge.jpg")
                     .build();
 
@@ -159,7 +159,7 @@ public class GamesApplication {
                     .runtime(80)
                     .rating(30)
                     .plot("TPS survival horror video game")
-                    .trailer("https://www.youtube.com/embed/KRQhKw-YCWs")
+                    .trailer("https://www.youtube.com/embed/3wBHSSOkCGQ")
                     .poster("silenthill.jpg")
                     .build();
 
@@ -218,7 +218,7 @@ public class GamesApplication {
                     .rating(20)
                     .runtime(20)
                     .title("Hitman: Codename 47")
-                    .trailer("https://www.youtube.com/embed/2h9YntthI5U")
+                    .trailer("https://www.youtube.com/embed/Y7tkK9TRhDY")
                     .year(2000)
                     .actors(Arrays.asList("Peter Gjellerup Koch", "Morten Iversen", "Jesper Kyd"))
                     .build();
