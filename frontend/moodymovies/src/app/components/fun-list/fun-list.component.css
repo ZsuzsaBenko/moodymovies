@@ -1,9 +1,10 @@
 .fun-list-container {
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   background-color: teal;
   border-radius: 5px;
+  height: 100%;
 }
 
 h3 {
@@ -19,6 +20,9 @@ h3 {
   justify-content: space-around;
 }
 
+.single-fun {
+  display: inline-block;
+}
 
 .fun-item {
   width: 300px;

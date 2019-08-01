@@ -1,10 +1,9 @@
 package com.peterpal.series.controller;
 
-import com.peterpal.series.repository.SeriesRepository;
-import com.peterpal.series.model.Genre;
 import com.peterpal.series.model.Mood;
 import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.model.ScreenFun;
+import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.service.SeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,9 +37,7 @@ public class SeriesController {
 
     @GetMapping("/random")
     public ScreenFun getRandom() {
-        List<ScreenFun> allScreenFun = seriesRepository.findAll();
-        int size = allScreenFun.size();
-        return allScreenFun.get(seriesService.randomPicker(size));
+        return seriesService.getRandomScreenFun();
     }
 
     @GetMapping("/questionnaire")
@@ -58,10 +55,9 @@ public class SeriesController {
 
     @GetMapping("/test")
     public List<ScreenFun> getTest() {
-        List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
-        List<ScreenFun> adventures = seriesRepository.findAllByGenre(Genre.ADVENTURE);
-        crimes.addAll(adventures);
-        return crimes;
+        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
+        return seriesService.getSecondHalfOfTheList(series);
+
     }
 
     @GetMapping("/adv")

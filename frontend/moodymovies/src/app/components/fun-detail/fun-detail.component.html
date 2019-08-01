@@ -1,25 +1,23 @@
-<div>
-  <h2>{{ chosenFun.title }}</h2>
+<div class="details-container">
+  <h1>{{ chosenFun.title }}</h1>
   <div class="fun-container">
     <div class="poster">
       <img [src]="['../../../assets/' + chosenFun.poster]" alt="{{ chosenFun.title }}">
     </div>
     <div class="details">
-      <p class="genre-runtime">
-        <span>Genre: {{ chosenFun.genre }}</span>
-        <span>Runtime: {{ chosenFun.runtime }}</span>
-      </p>
-      <p class="year">Year: {{ chosenFun.year }}</p>
-      <p class="director">Director: {{ chosenFun.director }}</p>
-      <p class="producer">Producer: {{ chosenFun.producer }}</p>
-      <p class="actors">Actors:
+      <p><span>Genre: </span>{{ chosenFun.genre }}</p>
+      <p><span>Runtime: </span>{{ runtime }}</p>
+      <p><span>Year: </span>{{ chosenFun.year }}</p>
+      <p><span>Director: </span>{{ chosenFun.director }}</p>
+      <p><span>Producer: </span>{{ chosenFun.producer }}</p>
+      <p><span>Actors: </span>
         <span *ngFor="let actor of chosenFun.actors, let i = index">
           <span *ngIf="i < chosenFun.actors.length - 1">{{ actor }}, </span>
           <span *ngIf="i === chosenFun.actors.length - 1">{{ actor }}</span>
         </span>
       </p>
     </div>
-    <div class="plot">{{ chosenFun.plot }}</div>
+    <div class="plot"><span>Plot: </span>{{ chosenFun.plot }}</div>
     <div class="iframe-container">
       <iframe [src]="trailerUrl" allow="accelerometer; autoplay; encrypted-media;
         gyroscope; picture-in-picture" allowfullscreen>
