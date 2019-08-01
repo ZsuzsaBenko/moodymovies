@@ -38,9 +38,7 @@ public class SeriesController {
 
     @GetMapping("/random")
     public ScreenFun getRandom() {
-        List<ScreenFun> allScreenFun = seriesRepository.findAll();
-        int size = allScreenFun.size();
-        return allScreenFun.get(seriesService.randomPicker(size));
+        return seriesService.getRandomScreenFun();
     }
 
     @GetMapping("/questionnaire")

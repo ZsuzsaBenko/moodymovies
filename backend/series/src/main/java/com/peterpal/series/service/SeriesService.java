@@ -18,6 +18,12 @@ public class SeriesService {
     @Autowired
     SeriesRepository seriesRepository;
 
+    public ScreenFun getRandomScreenFun() {
+        List<ScreenFun> allScreenFun = seriesRepository.findAll();
+        int size = allScreenFun.size();
+        return allScreenFun.get(randomPicker(size));
+    }
+
     public int randomPicker(int size) {
         return random.nextInt(size);
     }
