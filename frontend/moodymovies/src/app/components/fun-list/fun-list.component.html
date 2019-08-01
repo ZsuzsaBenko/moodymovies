@@ -1,4 +1,4 @@
-<div class="fun-list-container">
+<div [ngClass]="funList.length > 4 ? 'fun-list-container' : 'single-fun-container'">
   <h3 *ngIf="filterFunList('anime').length > 1">Anime</h3>
   <div [ngClass]="(filterFunList('anime').length === 1) ? 'single-fun' : 'fun-list'">
     <h3 *ngIf="filterFunList('anime').length === 1">Anime</h3>

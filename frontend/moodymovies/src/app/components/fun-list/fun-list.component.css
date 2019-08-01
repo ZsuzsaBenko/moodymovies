@@ -1,6 +1,14 @@
 .fun-list-container {
   box-sizing: border-box;
-  max-width: 1300px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: teal;
+  border-radius: 5px;
+}
+
+.single-fun-container {
+  box-sizing: border-box;
+  max-width: 1350px;
   margin: 0 auto;
   background-color: teal;
   border-radius: 5px;

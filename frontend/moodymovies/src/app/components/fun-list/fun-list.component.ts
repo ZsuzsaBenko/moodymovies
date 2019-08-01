@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./fun-list.component.css']
 })
 export class FunListComponent implements OnInit {
-  funList: ScreenFun[];
+  funList: ScreenFun[] = [];
 
   constructor(private funService: FunService,
               private router: ActivatedRoute) {
