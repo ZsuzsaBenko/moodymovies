@@ -1,6 +1,5 @@
 package com.peterpal.series.service;
 
-import com.peterpal.series.model.Mood;
 import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.model.Genre;
@@ -8,15 +7,66 @@ import com.peterpal.series.model.ScreenFun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Service
 public class SeriesService {
 
+    @Autowired
+    SeriesRepository seriesRepository;
 
-    Random random = new Random();
+    private Random random = new Random();
+
+    public List<ScreenFun> getAll() {
+        return seriesRepository.findByOrderByRatingAsc();
+    }
+
+    public ScreenFun getRandomScreenFun() {
+        List<ScreenFun> all = seriesRepository.findAll();
+        return all.get(random.nextInt(all.size()));
+    }
+
+    public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
+        List<Genre> genres = setGenre(questionnaire);
+        List<ScreenFun> results = new ArrayList<>();
+        if (questionnaire.getMasochist() == 1) {
+            for (Genre genre : genres) {
+                results.addAll(seriesRepository.findAllByGenre(genre));
+            }
+            // TODO
+            // results.sort();
+            results = results.subList(0, results.size() / 2);
+        } else {
+            for (Genre genre : genres) {
+                results.addAll(seriesRepository.findAllByGenre(genre));
+            }
+            // TODO
+            // results.sort();
+            results = results.subList(results.size() / 2, results.size());
+        }
+
+        return results.get(random.nextInt(results.size()));
+
+    }
+
+    private List<Genre> setGenre(Questionnaire questionnaire) {
+        switch (questionnaire.getMood()) {
+            case CRY:
+                return Arrays.asList(Genre.DRAMA, Genre.CRIME);
+            case LAUGH:
+                return Arrays.asList(Genre.COMEDY);
+            case THINK:
+            case LEARN:
+                return Arrays.asList(Genre.DOCUMENTARY, Genre.ADVENTURE, Genre.FANTASY);
+            case BE_SCARED:
+            case BE_THRILLED:
+                return Arrays.asList(Genre.CRIME, Genre.ADVENTURE);
+            default:
+                return Arrays.asList(Genre.FANTASY);
+        }
+    }
+    
+    /*Random random = new Random();
 
     @Autowired
     SeriesRepository seriesRepository;
@@ -40,9 +90,6 @@ public class SeriesService {
         return seriesRepository.findAll();
     }
 
-
-
-
     //backend to personalize
 
     public List<ScreenFun> getAllInOrderByRating() {
@@ -61,15 +108,12 @@ public class SeriesService {
         return secondHalf;
     }
 
-
-
     public List<ScreenFun> collectTheCry() {
         List<ScreenFun> cries = seriesRepository.findAllByGenre(Genre.DRAMA);
         List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
         cries.addAll(crimes);
         return cries;
     }
-
 
     public List<ScreenFun> collectTheThinkLearn() {
         List<ScreenFun> learns = seriesRepository.findAllByGenre(Genre.DOCUMENTARY);
@@ -91,7 +135,6 @@ public class SeriesService {
         List<ScreenFun> laughs = seriesRepository.findAllByGenre(Genre.COMEDY);
         return laughs;
     }
-
 
     public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
         replaceTheNull(questionnaire);
@@ -124,8 +167,7 @@ public class SeriesService {
     public Questionnaire replaceTheNull(Questionnaire questionnaire) {
         if (questionnaire.getMood() == null) questionnaire.setMood(Mood.BE_THRILLED);
         return questionnaire;
-    }
-
+    }*/
 
 
 }
