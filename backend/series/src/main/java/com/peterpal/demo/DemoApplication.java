@@ -118,19 +118,19 @@ public class DemoApplication {
                     .actors(Arrays.asList("Edward Andrews", "Harrison Page", "Robert Alda", "Patrick Collins"))
                     .trailer("").build());
 
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
-//
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
+            seriesRepository.save(ScreenFun.builder().title("Ironside").funType("Series").rating(7.0).genre(Genre.CRIME)
+                    .director("Collier Young").producer("N/A")
+                    .year(1967).plot("Wheelchair-bound detective Robert T. Ironside battles the bad guys on the streets of San Francisco.")
+                    .runtime(60).poster("ironside.jpg")
+                    .actors(Arrays.asList("Raymond Burr", "Don Galloway", "Don Mitchell", "Barbara Anderson"))
+                    .trailer("").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Lost").funType("Series").rating(8.4).genre(Genre.ADVENTURE)
+                    .director("J.J. Abrams").producer("N/A")
+                    .year(2004).plot("The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.")
+                    .runtime(44).poster("lost.jpg")
+                    .actors(Arrays.asList("Jorge Garcia", "Josh Holloway", "Yunjin Kim", "Evangeline Lilly"))
+                    .trailer("").build());
 //
 //            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
 //                    .director("N/A").producer("N/A")

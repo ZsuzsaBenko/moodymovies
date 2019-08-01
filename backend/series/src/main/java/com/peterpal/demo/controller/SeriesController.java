@@ -64,4 +64,9 @@ public class SeriesController {
         crimes.addAll(adventures);
         return crimes;
     }
+
+    @GetMapping("/adv")
+    public List<ScreenFun> getCries() {
+        return seriesService.collectTheScaredThrilled();
+    }
 }
