@@ -79,42 +79,42 @@ public class SeriesApplication {
                     .trailer("https://www.youtube.com/embed/yTuxhQt94zU").build());
 
             seriesRepository.save(ScreenFun.builder().title("Dr. Ken").funType("series").rating(5.8).genre(Genre.COMEDY)
-                    .director("John Fox").producer("N/A")
+                    .director("Anthony Rich").producer("John Davis")
                     .year(2015).plot("A frustrated doctor juggles his career, marriage, and family.")
                     .runtime(21).poster("drken.jpg")
                     .actors(Arrays.asList("Ken Jeong", "Suzy Nakamura", "Tisha Campbell-Martin", "Jonathan Slavin"))
                     .trailer("https://www.youtube.com/embed/b7RpiPXSZRY").build());
 
             seriesRepository.save(ScreenFun.builder().title("Making a Murderer").funType("series").rating(8.6).genre(Genre.DOCUMENTARY)
-                    .director("N/A").producer("N/A")
+                    .director("Moira Demos").producer("Laura Ricciardi")
                     .year(2015).plot("Filmed over a 10-year period, Steven Avery, a DNA exoneree who, while in the midst of exposing corruption in local law enforcement, finds himself the prime suspect in a grisly new crime.")
                     .runtime(60).poster("mam.jpg")
                     .actors(Arrays.asList("Dolores Avery", "Steven Avery", "Ken Kratz", "Brendan Dassey"))
                     .trailer("https://www.youtube.com/embed/qxgbdYaR_KQ").build());
 
             seriesRepository.save(ScreenFun.builder().title("The West").funType("series").rating(8.4).genre(Genre.DOCUMENTARY)
-                    .director("N/A").producer("N/A")
-                    .year(1996).plot("N/A")
+                    .director("Stephen Ives").producer("Jody Abramson")
+                    .year(1996).plot("This documentary covers the history of the American West from the Native American tribes to their encounter with Europeans and how the Europeans conquered them and settled the land. In telling this story, the film takes into the account to both the viewpoints of Indians and other minorities to balance the white populations history.")
                     .runtime(537).poster("thewest.jpg")
                     .actors(Arrays.asList("Peter Coyote", "N. Scott Momaday", "Murphy Guyer", "John Trudell"))
                     .trailer("https://www.youtube.com/embed/aRq83NLacbE").build());
 
             seriesRepository.save(ScreenFun.builder().title("The Blue Planet").funType("series").rating(8.9).genre(Genre.DOCUMENTARY)
-                    .director("N/A").producer("N/A")
+                    .director("David Attenborough").producer("Pierce Brosnan")
                     .year(2001).plot("Mammoth series, five years in the making, taking a look at the rich tapestry of life in the world's oceans.")
                     .runtime(389).poster("tbp.jpg")
                     .actors(Arrays.asList("David Attenborough", "Pierce Brosnan"))
                     .trailer("https://www.youtube.com/embed/-pdlqV4fo68").build());
 
             seriesRepository.save(ScreenFun.builder().title("Six Feet Under").funType("series").rating(8.7).genre(Genre.DRAMA)
-                    .director("Alan Ball").producer("N/A")
+                    .director("Alan Ball").producer("Alan Ball")
                     .year(2001).plot("A chronicle of the lives of a dysfunctional family who run an independent funeral home in Los Angeles.")
                     .runtime(55).poster("sfu.jpg")
                     .actors(Arrays.asList("Peter Krause", "Michael C. Hall", "Frances Conroy", "Lauren Ambrose"))
                     .trailer("https://www.youtube.com/embed/VT6Fq1ENb8s").build());
 
             seriesRepository.save(ScreenFun.builder().title("Euphoria").funType("series").rating(8.1).genre(Genre.DRAMA)
-                    .director("Sam Levinson").producer("Sam Levinson")
+                    .director("Sam Levinson").producer("Michael Carroll")
                     .year(2019).plot("A look at life for a group of high school students as they grapple with issues of drugs, sex, and violence.")
                     .runtime(55).poster("euphoria.jpg")
                     .actors(Arrays.asList("Zendaya", "Maude Apatow", "Angus Cloud", "Eric Dane"))
@@ -128,14 +128,14 @@ public class SeriesApplication {
                     .trailer("https://www.youtube.com/embed/qZMSg8v11Ms").build());
 
             seriesRepository.save(ScreenFun.builder().title("Supertrain").funType("series").rating(4.6).genre(Genre.DRAMA)
-                    .director("Barry Crane").producer("Earl W. Wallace")
+                    .director("Barry Crane").producer("Fred Silverman")
                     .year(1979).plot("The adventures of a nation-spanning train and its passengers.")
                     .runtime(60).poster("supertrain.jpg")
                     .actors(Arrays.asList("Edward Andrews", "Harrison Page", "Robert Alda", "Patrick Collins"))
                     .trailer("https://www.youtube.com/embed/gUERtAe73NI").build());
 
             seriesRepository.save(ScreenFun.builder().title("Ironside").funType("series").rating(7.0).genre(Genre.CRIME)
-                    .director("Don Weis").producer("Collier Young")
+                    .director("Don Weis").producer("Cy Chermak")
                     .year(1967).plot("Wheelchair-bound detective Robert T. Ironside battles the bad guys on the streets of San Francisco.")
                     .runtime(60).poster("ironside.jpg")
                     .actors(Arrays.asList("Raymond Burr", "Don Galloway", "Don Mitchell", "Barbara Anderson"))
@@ -156,7 +156,7 @@ public class SeriesApplication {
                     .trailer("https://www.youtube.com/embed/PFFKjptRr7Y").build());
 
             seriesRepository.save(ScreenFun.builder().title("Grimm").funType("series").rating(7.8).genre(Genre.FANTASY)
-                    .director("Norberto Barba").producer("Stephen Carpenter")
+                    .director("Norberto Barba").producer("David Greenwalt")
                     .year(2011).plot("A homicide detective discovers he is a descendant of hunters who fight supernatural forces.")
                     .runtime(45).poster("grimm.jpg")
                     .actors(Arrays.asList("David Giuntoli", "Russell Hornsby", "Silas Weir Mitchell", "Sasha Roiz"))
@@ -170,7 +170,7 @@ public class SeriesApplication {
                     .trailer("https://www.youtube.com/embed/SLOa9s1q_Ug").build());
 
             seriesRepository.save(ScreenFun.builder().title("True Detective").funType("series").rating(9.0).genre(Genre.ADVENTURE)
-                    .director("Cary Joji Fukunaga").producer("Nic Pizzolatto")
+                    .director("Cary Joji Fukunaga").producer("Richard Brown")
                     .year(2014).plot("Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.")
                     .runtime(44).poster("td.jpg")
                     .actors(Arrays.asList("Matthew McConaughey", "Colin Farrell", "Mahershala Ali", "Woody Harrelson"))
