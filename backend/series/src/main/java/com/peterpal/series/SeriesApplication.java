@@ -44,38 +44,38 @@ public class SeriesApplication {
         return args -> {
 
             seriesRepository.save(ScreenFun.builder().title("Game of Thrones").funType("series").rating(9.5).genre(Genre.FANTASY)
-                    .director("N/A").producer("N/A")
+                    .director("David Nutter").producer("David Benioff")
                     .year(2011).plot("Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.")
                     .runtime(57).poster("got.jpg")
                     .actors(Arrays.asList("Peter Dinklage", "Lena Headey", "Emilia Clarke", "Kit Harington"))
                     .trailer("https://www.youtube.com/embed/rlR4PJn8b8I").build());
 
             seriesRepository.save(ScreenFun.builder().title("Airwolf").funType("series").rating(6.8).genre(Genre.ADVENTURE)
-                    .director("N/A").producer("N/A")
+                    .director("Virgil W. Vogel").producer("Carol Gillson")
                     .year(1984).plot("As part of a deal with an intelligence agency to look for his missing brother, a renegade pilot goes on missions with an advanced battle helicopter.")
                     .runtime(60).poster("airwolf.jpg")
                     .actors(Arrays.asList("Jan-Michael Vincent", "Alex Cord", "Ernest Borgnine", "Jean Bruce Scott"))
                     .trailer("https://www.youtube.com/embed/ZE44r_EvCXc").build());
 
             seriesRepository.save(ScreenFun.builder().title("Homeland").funType("series").rating(8.3).genre(Genre.CRIME)
-                    .director("N/A").producer("N/A")
+                    .director("Lesli Linka Glatter").producer("Alex Gansa")
                     .year(2011).plot("A bipolar CIA operative becomes convinced a prisoner of war has been turned by al-Qaeda and is planning to carry out a terrorist attack on American soil.")
                     .runtime(55).poster("homeland.jpg")
                     .actors(Arrays.asList("Claire Danes", "Mandy Patinkin", "Rupert Friend", "Maury Sterling"))
                     .trailer("https://www.youtube.com/embed/KyFmS3wRPCQ").build());
 
             seriesRepository.save(ScreenFun.builder().title("Rob").funType("series").rating(5.6).genre(Genre.COMEDY)
-                    .director("N/A").producer("N/A")
+                    .director("Andrew D. Weyman").producer("Chad E. Beck")
                     .year(2012).plot("Centers on solitary guy, Rob, who marries into a huge Mexican-American family.")
                     .runtime(30).poster("rob.jpg")
                     .actors(Arrays.asList("Rob Schneider", "Cheech Marin", "Claudia Bassols", "Diana Maria Riva"))
                     .trailer("https://www.youtube.com/embed/GY47MwFWhPg").build());
 
             seriesRepository.save(ScreenFun.builder().title("Truth Be Told").funType("series").rating(6.0).genre(Genre.COMEDY)
-                    .director("DJ Nash").producer("N/A")
+                    .director("Pamela Fryman").producer("D.J. Nash")
                     .year(2015).plot("A look at the life of two best friends, a meek politically correct Caucasian ethics professor and an easy-going African American, and their families.")
                     .runtime(21).poster("tbt.jpg")
-                    .actors(Arrays.asList())
+                    .actors(Arrays.asList("Mark-Paul Gosselaar", "Tone Bell", "Vanessa Lachey"))
                     .trailer("https://www.youtube.com/embed/yTuxhQt94zU").build());
 
             seriesRepository.save(ScreenFun.builder().title("Dr. Ken").funType("series").rating(5.8).genre(Genre.COMEDY)
