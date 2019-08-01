@@ -181,7 +181,7 @@ public class MoviesApplication {
                     .director("Paul Weitz")
                     .producer("Chris Bender")
                     .plot("Four teenage boys enter a pact to lose their virginity by prom night.")
-                    .poster("american-pie.JPEG")
+                    .poster("american-pie.jpg")
                     .trailer("https://www.youtube.com/embed/iUZ3Yxok6N8")
                     .build();
 
@@ -196,7 +196,7 @@ public class MoviesApplication {
                     .director("Sharon Maguire")
                     .producer("Tim Bevan")
                     .plot("A British woman is determined to improve herself while she looks for love in a year in which she keeps a personal diary.")
-                    .poster("bridget-jones.JPEG")
+                    .poster("bridget-jones.jpg")
                     .trailer("https://www.youtube.com/embed/PYPK3jPZkYI")
                     .build();
 
@@ -211,7 +211,7 @@ public class MoviesApplication {
                     .director("Steven Soderbergh")
                     .producer("Jerry Weintraub")
                     .plot("Danny Ocean and his eleven accomplices plan to rob three Las Vegas casinos simultaneously.")
-                    .poster("oceans-eleven.JPEG")
+                    .poster("oceans-eleven.jpg")
                     .trailer("https://www.youtube.com/embed/imm6OR605UI")
                     .build();
 
@@ -226,7 +226,7 @@ public class MoviesApplication {
                     .director("David Fincher")
                     .producer("Scott Rudin")
                     .plot("Journalist Mikael Blomkvist is aided in his search for a woman who has been missing for forty years by Lisbeth Salander, a young computer hacker.")
-                    .poster("girl-with-dragon-tattoo.JPEG")
+                    .poster("girl-with-dragon-tattoo.jpg")
                     .trailer("https://www.youtube.com/embed/DqQe3OrsMKI")
                     .build();
 
@@ -241,7 +241,7 @@ public class MoviesApplication {
                     .director("Christopher Nolan")
                     .producer("Christopher Ball")
                     .plot("A man with short-term memory loss attempts to track down his wife's murderer.")
-                    .poster("memento.JPEG")
+                    .poster("memento.jpg")
                     .trailer("https://www.youtube.com/embed/0vS0E9bBSL0")
                     .build();
 
@@ -256,7 +256,7 @@ public class MoviesApplication {
                     .director(" Eric Bress")
                     .producer("Anthony Rhulen")
                     .plot("A man with short-term memory loss attempts to track down his wife's murderer.")
-                    .poster("butterfly-effect.JPEG")
+                    .poster("butterfly-effect.jpg")
                     .trailer("https://www.youtube.com/embed/B8_dgqfPXFg")
                     .build();
 
