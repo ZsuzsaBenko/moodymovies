@@ -1,6 +1,7 @@
 <div class="fun-list-container">
-  <h3 *ngIf="filterFunList('anime').length > 0">Anime</h3>
-  <div class="fun-list">
+  <h3 *ngIf="filterFunList('anime').length > 1">Anime</h3>
+  <div [ngClass]="(filterFunList('anime').length === 1) ? 'single-fun' : 'fun-list'">
+    <h3 *ngIf="filterFunList('anime').length === 1">Anime</h3>
     <div *ngFor="let fun of filterFunList('anime'), let i = index">
       <div class="fun-item" [id]="i">
         <p>{{ fun.title }}</p>
@@ -10,8 +11,9 @@
       </div>
     </div>
   </div>
-  <h3 *ngIf="filterFunList('game').length > 0">Game</h3>
-  <div class="fun-list">
+  <h3 *ngIf="filterFunList('game').length > 1">Games</h3>
+  <div [ngClass]="(filterFunList('game').length === 1) ? 'single-fun' : 'fun-list'">
+    <h3 *ngIf="filterFunList('game').length === 1">Game</h3>
     <div *ngFor="let fun of filterFunList('game'), let i = index">
       <div class="fun-item" [id]="i">
         <p>{{ fun.title }}</p>
@@ -21,8 +23,9 @@
       </div>
     </div>
   </div>
-  <h3 *ngIf="filterFunList('movie').length > 0">Movie</h3>
-  <div class="fun-list">
+  <h3 *ngIf="filterFunList('movie').length > 1">Movies</h3>
+  <div [ngClass]="(filterFunList('movie').length === 1) ? 'single-fun' : 'fun-list'">
+    <h3 *ngIf="filterFunList('movie').length === 1">Movie</h3>
     <div *ngFor="let fun of filterFunList('movie'), let i = index">
       <div class="fun-item"  [id]="i">
         <p>{{ fun.title }}</p>
@@ -32,8 +35,9 @@
       </div>
     </div>
   </div>
-  <h3 *ngIf="filterFunList('series').length > 0">Series</h3>
-  <div class="fun-list">
+  <h3 *ngIf="filterFunList('series').length > 1">Series</h3>
+  <div [ngClass]="(filterFunList('series').length === 1) ? 'single-fun' : 'fun-list'">
+    <h3 *ngIf="filterFunList('series').length === 1">Series</h3>
     <div *ngFor="let fun of filterFunList('series'), let i = index">
       <div class="fun-item" [id]="i">
         <p>{{ fun.title }}</p>
