@@ -41,16 +41,16 @@ public class AnimeService {
         double rating = 7;
 
         if (questionnaire.getMasochist() == 1) {
-            for (Genre genre: genres) {
-                results.addAll(repository.getScreenFunsByRatingLessThanEqualAndGenre(rating,genre));
+            for (Genre genre : genres) {
+                results.addAll(repository.getScreenFunsByRatingLessThanEqualAndGenre(rating, genre));
             }
         } else {
-            for (Genre genre: genres) {
-                results.addAll(repository.getScreenFunsByRatingGreaterThanAndGenre(rating,genre));
+            for (Genre genre : genres) {
+                results.addAll(repository.getScreenFunsByRatingGreaterThanAndGenre(rating, genre));
             }
         }
 
-        return results.size() > 0 ? results.get(random.nextInt(results.size())): null;
+        return results.size() > 0 ? results.get(random.nextInt(results.size())) : null;
     }
 
     private List<Genre> setGenre(Questionnaire questionnaire) {
