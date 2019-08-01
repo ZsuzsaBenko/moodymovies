@@ -1,8 +1,10 @@
 package com.peterpal.series.controller;
 
+import com.peterpal.series.repository.SeriesRepository;
+import com.peterpal.series.model.Genre;
+import com.peterpal.series.model.Mood;
 import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.model.ScreenFun;
-import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.service.SeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +50,22 @@ public class SeriesController {
             chooseFor = seriesRepository.findByOrderByRatingAsc();
             return chooseFor.subList(0, 2);
         }
+        if(questionnaire.getMood() == Mood.BE_SCARED || questionnaire.getMood() == Mood.BE_THRILLED){
+        }
 
         return chooseFor;
+    }
+
+    @GetMapping("/test")
+    public List<ScreenFun> getTest() {
+        List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
+        List<ScreenFun> adventures = seriesRepository.findAllByGenre(Genre.ADVENTURE);
+        crimes.addAll(adventures);
+        return crimes;
+    }
+
+    @GetMapping("/adv")
+    public List<ScreenFun> getCries() {
+        return seriesService.collectTheScaredThrilled();
     }
 }
