@@ -57,12 +57,13 @@ public class SeriesController {
         return seriesService.collectTheCry();
     }
 
-    @GetMapping("/test")
-    public List<ScreenFun> getTest() {
-        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
-        return seriesService.getSecondHalfOfTheList(series);
-
-    }
+//    @GetMapping("/test")
+//    public int getTest(@RequestBody Questionnaire questionnaire) {
+//        if (questionnaire.)
+//        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
+//        return seriesService.getSecondHalfOfTheList(series);
+//
+//    }
 
     @GetMapping("/adv")
     public List<ScreenFun> getCries() {

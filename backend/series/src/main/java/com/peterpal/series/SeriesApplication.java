@@ -48,7 +48,7 @@ public class SeriesApplication {
                     .year(2011).plot("Nine noble families fight for control over the mythical lands of Westeros, while an ancient enemy returns after being dormant for thousands of years.")
                     .runtime(57).poster("got.jpg")
                     .actors(Arrays.asList("Peter Dinklage", "Lena Headey", "Emilia Clarke", "Kit Harington"))
-                    .trailer("https://www.youtube.com/watch?v=rlR4PJn8b8I").build());
+                    .trailer("https://www.youtube.com/embed/rlR4PJn8b8I").build());
 
             seriesRepository.save(ScreenFun.builder().title("Airwolf").funType("series").rating(6.8).genre(Genre.ADVENTURE)
                     .director("N/A").producer("N/A")

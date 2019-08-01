@@ -34,7 +34,13 @@ public class SeriesService {
     }
 
 
+
+
     //backend to personalize
+
+    public List<ScreenFun> getAllInOrderByRating() {
+        return seriesRepository.findByOrderByRatingAsc();
+    }
 
     public List<ScreenFun> getFirstHalfOfTheList(List<ScreenFun> series) {
         int chunkSize = series.size() % 2 == 0 ? series.size() / 2 : (series.size() / 2) + 1;
@@ -93,9 +99,9 @@ public class SeriesService {
         return forNigths;
     }
 
-//    public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
-//
-//    }
+    public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
+            return null;
+    }
 
 
 
