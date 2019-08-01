@@ -18,8 +18,6 @@ import java.util.List;
 public class SeriesController {
 
     @Autowired
-    private SeriesRepository seriesRepository;
-    @Autowired
     private SeriesService seriesService;
 
 
@@ -29,11 +27,6 @@ public class SeriesController {
         return seriesService.getALl();
     }
 
-    @GetMapping("/order")
-    public List<ScreenFun> getOrderByRating() {
-        return seriesRepository.findByOrderByRatingAsc();
-    }
-
 
     @GetMapping("/random")
     public ScreenFun getRandom() {
@@ -41,32 +34,8 @@ public class SeriesController {
     }
 
     @GetMapping("/questionnaire")
-    public List<ScreenFun> getPersonal(@RequestBody Questionnaire questionnaire) {
-//        List<ScreenFun> chooseFor = seriesRepository.findAll();
-//        if (questionnaire.getMasochist() == 1){
-//            chooseFor = seriesRepository.findByOrderByRatingAsc();
-//            return chooseFor.subList(0, 2);
-//        }
-//        if(questionnaire.getMood() == Mood.BE_SCARED || questionnaire.getMood() == Mood.BE_THRILLED){
-//        }
-//
-//        return chooseFor;
-        if (questionnaire.getMood() == null) {
-            return seriesService.collectTheLaugh();
-        }
-        return seriesService.collectTheCry();
+    public ScreenFun getPersonal(@RequestBody Questionnaire questionnaire) {
+        return seriesService.getALl().get(0);
     }
 
-//    @GetMapping("/test")
-//    public int getTest(@RequestBody Questionnaire questionnaire) {
-//        if (questionnaire.)
-//        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
-//        return seriesService.getSecondHalfOfTheList(series);
-//
-//    }
-
-    @GetMapping("/adv")
-    public List<ScreenFun> getCries() {
-        return seriesService.collectTheScaredThrilled();
-    }
 }
