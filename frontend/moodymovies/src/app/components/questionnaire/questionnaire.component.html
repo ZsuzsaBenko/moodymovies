@@ -1,56 +1,62 @@
 <div class="questionnaire-container">
   <h2>What would be the ideal fun for you today?</h2>
   <p>Fill in this short questionnaire and based on the profile you provide, we'll recommend you an amazing movie, series, anime or game!</p>
-  <div class="form-container">
-    <form ngForm (ngSubmit)="onSubmit()">
-      <p>1) Are you male or female?</p>
-      <input type="radio" id="male" name="gender" value="1" [(ngModel)]='gender' checked>
-      <label for="male">male</label>
-      <input type="radio" id="female" name="gender" value="0" [(ngModel)]='gender'>
-      <label for="female">female</label>
-      <p><label for="age">How old are you?</label></p>
-      <input type="number" min="0" max="100" id="age" name="age" [(ngModel)]="age">
-      <p><label for="horoscope">2) What's your star sign?</label></p>
-      <select name="horoscope" id="horoscope" [(ngModel)]="horoscope">
-        <option value="AQUARIUS" selected>Aquarius</option>
-        <option value="PISCES">Pisces</option>
-        <option value="ARIES">Aries</option>
-        <option value="TAURUS">Taurus</option>
-        <option value="GEMINI">Gemini</option>
-        <option value="CANCER">Cancer</option>
-        <option value="LEO">Leo</option>
-        <option value="VIRGO">Virgo</option>
-        <option value="LIBRA">Libra</option>
-        <option value="SCORPIO">Scorpio</option>
-        <option value="SAGITTARIUS">Sagittarius</option>
-        <option value="CAPRICORN">Capricorn</option>
-      </select>
-      <p>3) Are you going to be alone?</p>
-      <input type="radio" id="alone-yes" name="alone" value="1" [(ngModel)]="alone" checked>
-      <label for="alone-yes">yes</label>
-      <input type="radio" id="alone-no" name="alone" value="0" [(ngModel)]="alone">
-      <label for="alone-no">no</label>
-      <p>4) What time are you going to watch the film or play the game?</p>
-      <input type="radio" id="day" name="time-of-day" value="1" [(ngModel)]="timeOfDay" checked>
-      <label for="day">during the day</label>
-      <input type="radio" id="night" name="time-of-day" value="0" [(ngModel)]="timeOfDay">
-      <label for="night">at night</label>
-      <p><label for="mood">5) As for your mood, do you want to...</label></p>
-      <select name="mood" id="mood" [(ngModel)]="mood">
-        <option value="CRY" selected>cry?</option>
-        <option value="LAUGH">laugh?</option>
-        <option value="THINK">think?</option>
-        <option value="BE_SCARED">be scared?</option>
-        <option value="LEARN">learn?</option>
-        <option value="BE_THRILLED">be thrilled?</option>
-      </select>
-      <p>6) A last question - are you a masochist?</p>
-      <input type="radio" id="masochist-yes" name="masochist" value="1" [(ngModel)]="masochist"checked>
-      <label for="masochist-yes">yes</label>
-      <input type="radio" id="masochist-no" name="masochist" value="0" [(ngModel)]="masochist">
-      <label for="masochist-no">no</label>
-      <input type="submit" value="Submit">
-    </form>
+  <div class="flex-container">
+    <div class="form-container">
+      <form ngForm (ngSubmit)="onSubmit()">
+        <p>1) Are you male or female?</p>
+        <input type="radio" id="male" name="gender" value="1" [(ngModel)]='gender' checked>
+        <label for="male" class="radio-label-left">male</label>
+        <input type="radio" id="female" name="gender" value="0" [(ngModel)]='gender'>
+        <label for="female">female</label>
+        <p><label for="age">How old are you?</label></p>
+        <input type="number" min="0" max="100" id="age" name="age" [(ngModel)]="age">
+        <p><label for="horoscope">2) What's your star sign?</label></p>
+        <select name="horoscope" id="horoscope" [(ngModel)]="horoscope">
+          <option value="AQUARIUS" selected>Aquarius</option>
+          <option value="PISCES">Pisces</option>
+          <option value="ARIES">Aries</option>
+          <option value="TAURUS">Taurus</option>
+          <option value="GEMINI">Gemini</option>
+          <option value="CANCER">Cancer</option>
+          <option value="LEO">Leo</option>
+          <option value="VIRGO">Virgo</option>
+          <option value="LIBRA">Libra</option>
+          <option value="SCORPIO">Scorpio</option>
+          <option value="SAGITTARIUS">Sagittarius</option>
+          <option value="CAPRICORN">Capricorn</option>
+        </select>
+        <p>3) Are you going to be alone?</p>
+        <input type="radio" id="alone-yes" name="alone" value="1" [(ngModel)]="alone" checked>
+        <label for="alone-yes" class="radio-label-left">yes</label>
+        <input type="radio" id="alone-no" name="alone" value="0" [(ngModel)]="alone">
+        <label for="alone-no">no</label>
+        <p>4) What time are you going to watch the film or play the game?</p>
+        <input type="radio" id="day" name="time-of-day" value="1" [(ngModel)]="timeOfDay" checked>
+        <label for="day" class="radio-label-left">during the day</label>
+        <input type="radio" id="night" name="time-of-day" value="0" [(ngModel)]="timeOfDay">
+        <label for="night">at night</label>
+        <p><label for="mood">5) As for your mood, do you want to...</label></p>
+        <select name="mood" id="mood" [(ngModel)]="mood">
+          <option value="CRY" selected>cry?</option>
+          <option value="LAUGH">laugh?</option>
+          <option value="THINK">think?</option>
+          <option value="BE_SCARED">be scared?</option>
+          <option value="LEARN">learn?</option>
+          <option value="BE_THRILLED">be thrilled?</option>
+        </select>
+        <p>6) A last question - are you a masochist?</p>
+        <input type="radio" id="masochist-yes" name="masochist" value="1" [(ngModel)]="masochist"checked>
+        <label for="masochist-yes" class="radio-label-left">yes</label>
+        <input type="radio" id="masochist-no" name="masochist" value="0" [(ngModel)]="masochist">
+        <label for="masochist-no">no</label>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="sloth">
+      <img src="../../../assets/zoo-sloth.gif" alt="sloth">
+      <p>We make sure you'll have great fun!</p>
+    </div>
   </div>
 </div>
 

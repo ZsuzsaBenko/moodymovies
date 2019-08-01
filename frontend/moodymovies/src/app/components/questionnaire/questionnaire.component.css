@@ -1,6 +1,6 @@
 .questionnaire-container {
   background-color: #176f79;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   font-size: 20px;
@@ -14,20 +14,71 @@ h2 {
 
 p {
   margin: 0;
-  padding: 20px 0 0;
+  padding: 20px 0 5px;
+}
+
+.questionnaire-container > p {
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 60%;
 }
 
 #horoscope, input[type="submit"] {
   display: block;
 }
 
-input[type="radio"] {
-  margin-right: 10px;
-  font-size: 25px;
+input, select {
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
 }
 
-input[type="radio"]:last-child {
-  margin-left: 50px;
+input[type="radio"] {
+  margin-right: 10px;
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+}
+
+.radio-label-left {
+  margin-right: 50px;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  margin-top: 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: #222;
+}
+
+.sloth {
+  padding-top: 40px;
+  width: 40%;
+  text-align: center;
+}
+
+.sloth img {
+  width: 100%;
+  box-shadow: 0 0 10px #111;
 }
 
 
