@@ -61,3 +61,12 @@ input[type="submit"]:hover {
   color: white;
   background-color: #176f79;
 }
+
+.collage {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collage img {
+  width: 100%;
+}
