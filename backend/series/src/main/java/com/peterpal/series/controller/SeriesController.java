@@ -56,10 +56,9 @@ public class SeriesController {
 
     @GetMapping("/test")
     public List<ScreenFun> getTest() {
-        List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
-        List<ScreenFun> adventures = seriesRepository.findAllByGenre(Genre.ADVENTURE);
-        crimes.addAll(adventures);
-        return crimes;
+        List<ScreenFun> series = seriesRepository.findByOrderByRatingAsc();
+        return seriesService.getSecondHalfOfTheList(series);
+
     }
 
     @GetMapping("/adv")
