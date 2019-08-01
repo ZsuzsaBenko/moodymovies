@@ -34,17 +34,16 @@ public class GameService {
     public ScreenFun getFilteredGame(Questionnaire questionnaire) {
         List<Genre> genres = setGenre(questionnaire);
         List<ScreenFun> results = new ArrayList<>();
-        int age = setAge(questionnaire);
+
+        int age = questionnaire.getAge();
         double rating = 50;
 
         if (age > 8) {
             if (questionnaire.getMasochist() == 1) {
-                assert genres != null;
                 for (Genre genre : genres) {
                     results.addAll(gameRepository.getScreenFunsByRatingLessThanEqualAndGenre(rating, genre));
                 }
             } else {
-                assert genres != null;
                 for (Genre genre : genres) {
                     results.addAll(gameRepository.getScreenFunsByRatingGreaterThanAndGenre(rating, genre));
                 }
@@ -53,12 +52,9 @@ public class GameService {
             results.addAll(gameRepository.getScreenFunsByGenre(Genre.ANIMATED));
         }
 
-        return genres.size() > 0 ? results.get(random.nextInt(results.size())) : null;
+        return results.get(random.nextInt(results.size()));
     }
 
-    private int setAge(Questionnaire questionnaire) {
-        return questionnaire.getAge();
-    }
 
     private List<Genre> setGenre(Questionnaire questionnaire) {
         switch (questionnaire.getMood()) {
@@ -74,7 +70,8 @@ public class GameService {
                 return Arrays.asList(Genre.DOCUMENTARY, Genre.ANIMATED);
             case BE_THRILLED:
                 return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.SCI_FI, Genre.HORROR);
+            default:
+                return Arrays.asList(Genre.values());
         }
-        return null;
     }
 }
