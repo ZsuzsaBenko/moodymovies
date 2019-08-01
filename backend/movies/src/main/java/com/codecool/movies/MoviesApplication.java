@@ -216,6 +216,156 @@ public class MoviesApplication {
                     .build();
 
             movieRepository.saveAll(Arrays.asList(vanHelsing, angelsDemons, gravity, kingsSpeech, mrMrsSmith, shrek, iceAge, starWarsPhantomMenace, loveActually, penguins, hpSorcerersStone));
+
+            ScreenFun matrix = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.SCI_FI)
+                    .year(1999)
+                    .rating(8.7)
+                    .runtime(136)
+                    .title("The Matrix")
+                    .actors(Arrays.asList("Keanu Reeves", "Laurence Fishburn", "Carrie-Anne Moss"))
+                    .director("The Wachowski Brothers")
+                    .producer("Joel Silver")
+                    .plot("A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.")
+                    .poster("matrix.jpg")
+                    .trailer("https://www.youtube.com/embed/m8e-FF8MsqU")
+                    .build();
+
+            ScreenFun blackSwan = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.DRAMA)
+                    .year(2010)
+                    .rating(8.00)
+                    .runtime(108)
+                    .title("Black Swan")
+                    .actors(Arrays.asList("Natalie Portman", "Mila Kunis", "Winona Ryder"))
+                    .director("Darren Aronofsky") .producer("Mike Medavoy")
+                    .plot("A committed dancer struggles to maintain her sanity after winning the lead role in a production of Tchaikovsky's Swan Lake.")
+                    .poster("blackswan.jpg")
+                    .trailer("https://www.youtube.com/embed/5jaI1XOB-bs")
+                    .build();
+
+            ScreenFun twilight = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.ROMANCE)
+                    .year(2008)
+                    .rating(5.2)
+                    .runtime(122)
+                    .title("Twilight")
+                    .actors(Arrays.asList("Robert Pattison", "Kristen Stewart", "Taylor Lautner"))
+                    .director("Catherine Hardwicke") .producer("Greg Mooradian")
+                    .plot("Bella Swan moves to Forks and encounters Edward Cullen, a gorgeous boy with a secret.")
+                    .poster("twilight.jpg")
+                    .trailer("https://www.youtube.com/embed/QDRLSqm_WVg")
+                    .build();
+
+            ScreenFun hangover = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.COMEDY)
+                    .year(2009)
+                    .rating(7.7)
+                    .runtime(100)
+                    .title("The Hangover")
+                    .actors(Arrays.asList("Bradley Cooper", "Zach Galifianakis", "Ed Helms"))
+                    .director("Todd Philips") .producer("Todd Philips")
+                    .plot("Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.")
+                    .poster("hangover.jpg")
+                    .trailer("https://www.youtube.com/embed/tcdUhdOlz9M")
+                    .build();
+
+            ScreenFun gladiator = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.ADVENTURE)
+                    .year(2000)
+                    .rating(8.5)
+                    .runtime(155)
+                    .title("The Gladiator")
+                    .actors(Arrays.asList("Russel Crowe", "Joaquin Phoenix", "Connie Nielsen"))
+                    .director("Ridley Scott")
+                    .producer("David Franzoni")
+                    .plot("A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.")
+                    .poster("gladiator.jpg")
+                    .trailer("https://www.youtube.com/embed/uvbavW31adA")
+                    .build();
+
+            ScreenFun sherlock = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.CRIME)
+                    .year(2009)
+                    .rating(7.6)
+                    .runtime(128)
+                    .title("Sherlock Holmes")
+                    .actors(Arrays.asList("Robert Downey Jr.", "Jude Law", "Rachel McAdams"))
+                    .director("Guy Ritchie") .producer("Susan Downey")
+                    .plot("Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.")
+                    .poster("sherlockholmes.jpg")
+                    .trailer("https://www.youtube.com/embed/J7nJksXDBWc")
+                    .build();
+
+            ScreenFun inception = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.SCI_FI)
+                    .year(2010)
+                    .rating(8.8)
+                    .runtime(148)
+                    .title("Inception")
+                    .actors(Arrays.asList("Leonardo Dicaprio", "Joseph Gordon-Levitt", "Ellen Page"))
+                    .director("Christopher Nolan")
+                    .producer("Christopher Nolan")
+                    .plot("A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.")
+                    .poster("inception.jpg")
+                    .trailer("https://www.youtube.com/embed/YoHD9XEInc0")
+                    .build();
+
+            ScreenFun taken = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.THRILLER)
+                    .year(2008)
+                    .rating(7.8)
+                    .runtime(94)
+                    .title("Taken")
+                    .actors(Arrays.asList("Liam Neeson", "Maggie Grace", "Famke Janssen"))
+                    .director("Pierre Morel")
+                    .producer("Luc Besson")
+                    .plot("A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.")
+                    .poster("taken.jpg")
+                    .trailer("https://www.youtube.com/embed/uPJVJBm9TPA")
+                    .build();
+
+            ScreenFun zootopia = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.ANIMATED)
+                    .year(2016)
+                    .rating(8.0)
+                    .runtime(108)
+                    .title("Zootopia")
+                    .actors(Arrays.asList("Ginnifer Goodwin", "Jason Bateman", "Idris Elba"))
+                    .director(" Byron Howard")
+                    .producer("Clark Spencer")
+                    .plot("In a city of anthropomorphic animals, a rookie bunny cop and a cynical con artist fox must work together to uncover a conspiracy.")
+                    .poster("zootopia.jpg")
+                    .trailer("https://www.youtube.com/embed/jWM0ct-OLsM")
+                    .build();
+
+            ScreenFun ptcCBP = ScreenFun.builder()
+                    .funType("movie")
+                    .genre(Genre.ADVENTURE)
+                    .year(2003)
+                    .rating(8.0)
+                    .runtime(144)
+                    .title("Pirates of the Caribbean - The Curse of the Black Pearl")
+                    .actors(Arrays.asList("Johnny Depp", "Orlando Bloom", "Keira Knightley"))
+                    .director("Gore Verbinski")
+                    .producer("Jerry Bruckheimer")
+                    .plot("Blacksmith Will Turner teams up with eccentric pirate Captain Jack Sparrow to save his love, the governor's daughter, from Jack's former pirate allies, who are now undead.")
+                    .poster("poccbp.jpg")
+                    .trailer("https://www.youtube.com/embed/naQr0uTrH_s")
+                    .build();
+
+
+            movieRepository.saveAll(Arrays.asList(matrix, blackSwan, twilight, hangover, gladiator, sherlock, inception, taken, zootopia, ptcCBP));
+
         };
     }
 }
