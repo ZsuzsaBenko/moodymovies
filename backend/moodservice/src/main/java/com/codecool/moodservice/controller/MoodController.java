@@ -21,7 +21,7 @@ public class MoodController {
         return this.moodService.getRandomItem();
     }
 
-    @GetMapping("/checkbox/{serviceType}")
+    @GetMapping("/fun-type/{serviceType}")
     public List<ScreenFun> getAllFromChosenCategory(@PathVariable String serviceType) {
         return this.moodService.getAllFromChosenCategory(ServiceType.valueOf(serviceType.toUpperCase()));
     }

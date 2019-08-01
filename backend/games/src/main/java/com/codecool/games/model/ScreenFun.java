@@ -16,7 +16,8 @@ import java.util.List;
 @Builder
 public class ScreenFun {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "ScreenFun_Gen")
+    @TableGenerator(name = "ScreenFun_Gen", allocationSize = 1)
     @Id
     private Long id;
 

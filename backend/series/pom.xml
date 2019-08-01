@@ -16,7 +16,6 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -124,7 +123,6 @@
             <version>2.1.9.RELEASE</version>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>

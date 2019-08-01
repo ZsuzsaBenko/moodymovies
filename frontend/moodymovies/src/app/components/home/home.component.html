@@ -3,6 +3,17 @@
   <a [routerLink]="['/random-fun']">Get some random fun!</a>
   <a [routerLink]="['/random-surprise']">Get a surprise!</a>
   <a [routerLink]="['/questionnaire']">Get a personalized choice!</a>
-  <a [routerLink]="['/all/:funType']">See all from a category</a>
+  <a [routerLink]="['/all', funType]">See all from a category</a>
+  <form ngForm (ngSubmit)="onSubmit()">
+    <input type="radio" id="anime" name="funType" value="anime" [(ngModel)]="funType" checked>
+    <label for="anime">anime</label>
+    <input type="radio" id="game" name="funType" value="games" [(ngModel)]="funType">
+    <label for="game">game</label>
+    <input type="radio" id="movie" name="funType" value="movies" [(ngModel)]="funType">
+    <label for="movie">movie</label>
+    <input type="radio" id="series" name="funType" value="series" [(ngModel)]="funType">
+    <label for="series">series</label>
+    <input type="submit" value="Submit">
+  </form>
   <a [routerLink]="['/all']">See all</a>
 </div>

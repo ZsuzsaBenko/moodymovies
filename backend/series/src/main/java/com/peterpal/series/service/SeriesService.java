@@ -1,4 +1,4 @@
-package com.peterpal.demo.service;
+package com.peterpal.series.service;
 
 import com.peterpal.demo.model.Genre;
 import com.peterpal.demo.model.ScreenFun;

@@ -16,13 +16,17 @@ export class FunListComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.router.snapshot.url[0].path === 'all') {
-      this.funList = this.funService.getAll();
+    if (this.router.snapshot.url[0].path.endsWith('all') && this.router.snapshot.params.funType == null) {
+      this.funService.getAll().subscribe( response => this.funList = response);
     } else if (this.router.snapshot.url[0].path === 'random-fun') {
-      this.funList = this.funService.getRandomFun();
+      this.funService.getOneRandomFromEachCategory().subscribe(response => this.funList = response);
     } else {
-      this.funList = this.funService.getAllByCategory();
+      const category = this.router.snapshot.params.funType;
+      this.funService.getAllByCategory(category).subscribe(response => this.funList = response);
     }
   }
 
+  filterFunList(category) {
+    return this.funList.filter(fun => fun.funType === category);
+  }
 }

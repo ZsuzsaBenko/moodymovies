@@ -25,7 +25,6 @@ public class GameController {
         return gameService.getAllGames();
     }
 
-    /*TODO business logic */
     @PostMapping("/questionnaire")
     public ScreenFun getFilteredGames(@RequestBody Questionnaire questionnaire) {
        return gameService.getFilteredGame(questionnaire);

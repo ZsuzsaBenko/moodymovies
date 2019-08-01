@@ -52,7 +52,7 @@ public class AnimeService {
             }
         }
 
-        return genres.size() > 0 ? results.get(random.nextInt(results.size())): null;
+        return results.size() > 0 ? results.get(random.nextInt(results.size())): null;
     }
 
     private List<Genre> setGenre(Questionnaire questionnaire) {

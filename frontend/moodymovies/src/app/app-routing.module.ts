@@ -11,9 +11,9 @@ const routes: Routes = [
   {path: 'random-surprise', component: FunDetailComponent},
   {path: 'random-profile', component: FunDetailComponent},
   {path: 'questionnaire', component: QuestionnaireComponent},
-  {path: 'all', component: FunListComponent},
   {path: 'all/:funType', component: FunListComponent, pathMatch: 'full'},
-  {path: ':id', component: FunDetailComponent}
+  {path: 'all', component: FunListComponent, pathMatch: 'full'},
+  {path: ':funType/:id', component: FunDetailComponent}
 ];
 
 @NgModule({
