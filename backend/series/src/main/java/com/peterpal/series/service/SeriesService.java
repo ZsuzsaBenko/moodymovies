@@ -1,8 +1,8 @@
 package com.peterpal.series.service;
 
-import com.peterpal.demo.model.Genre;
-import com.peterpal.demo.model.ScreenFun;
-import com.peterpal.demo.repository.SeriesRepository;
+import com.peterpal.series.repository.SeriesRepository;
+import com.peterpal.series.model.Genre;
+import com.peterpal.series.model.ScreenFun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
