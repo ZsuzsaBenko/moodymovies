@@ -33,8 +33,6 @@ public class GameService {
 
     public ScreenFun getFilteredGame(Questionnaire questionnaire) {
         List<Genre> genres = setGenre(questionnaire);
-        assert genres != null;
-
         List<ScreenFun> results = new ArrayList<>();
 
         int age = questionnaire.getAge();
@@ -54,7 +52,7 @@ public class GameService {
             results.addAll(gameRepository.getScreenFunsByGenre(Genre.ANIMATED));
         }
 
-        return genres.size() > 0 ? results.get(random.nextInt(results.size())) : null;
+        return results.get(random.nextInt(results.size()));
     }
 
 
@@ -72,7 +70,8 @@ public class GameService {
                 return Arrays.asList(Genre.DOCUMENTARY, Genre.ANIMATED);
             case BE_THRILLED:
                 return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.SCI_FI, Genre.HORROR);
+            default:
+                return Arrays.asList(Genre.values());
         }
-        return Arrays.asList(Genre.ACTION, Genre.ANIMATED, Genre.COMEDY, Genre.DOCUMENTARY, Genre.DRAMA, Genre.HORROR, Genre.ROMANCE, Genre.SCI_FI);
     }
 }
