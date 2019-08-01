@@ -4,21 +4,24 @@
   margin: 0 auto;
   background-color:  #176f79;
   border-radius: 5px;
+  padding: 0 25px;
 }
 
 .single-fun-container {
   box-sizing: border-box;
-  max-width: 1350px;
+  max-width: 1370px;
   margin: 0 auto;
   background-color:  #176f79;
   border-radius: 5px;
   height: 100%;
+  padding: 0 15px;
 }
 
 h3 {
   margin: 0;
   padding: 25px;
   font-size: 25px;
+  text-align: center;
 }
 
 .fun-list {
