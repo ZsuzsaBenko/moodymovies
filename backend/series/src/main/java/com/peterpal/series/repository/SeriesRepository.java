@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface SeriesRepository extends JpaRepository<ScreenFun, Long> {
+
     List<ScreenFun> findByOrderByRatingAsc();
 
     List<ScreenFun> findAllByGenre(@Param("genre") Genre genre);

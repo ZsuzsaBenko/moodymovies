@@ -24,7 +24,7 @@ import java.util.Arrays;
 public class SeriesApplication {
 
     @Autowired
-    SeriesRepository seriesRepository;
+    private SeriesRepository seriesRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(SeriesApplication.class, args);

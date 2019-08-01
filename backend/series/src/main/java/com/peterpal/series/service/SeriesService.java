@@ -1,9 +1,9 @@
 package com.peterpal.series.service;
 
-import com.peterpal.series.model.Questionnaire;
-import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.model.Genre;
+import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.model.ScreenFun;
+import com.peterpal.series.repository.SeriesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.*;
 public class SeriesService {
 
     @Autowired
-    SeriesRepository seriesRepository;
+    private SeriesRepository seriesRepository;
 
     private Random random = new Random();
 
@@ -22,31 +22,33 @@ public class SeriesService {
     }
 
     public ScreenFun getRandomScreenFun() {
-        List<ScreenFun> all = seriesRepository.findAll();
-        return all.get(random.nextInt(all.size()));
+        List<ScreenFun> allItems = seriesRepository.findAll();
+        return allItems.get(random.nextInt(allItems.size()));
     }
 
-    public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
-        List<Genre> genres = setGenre(questionnaire);
+    public ScreenFun getOneForQuestionnaire(Questionnaire questionnaire) {
         List<ScreenFun> results = new ArrayList<>();
+
         if (questionnaire.getMasochist() == 1) {
-            for (Genre genre : genres) {
-                results.addAll(seriesRepository.findAllByGenre(genre));
-            }
-            // TODO
-            // results.sort();
-            results = results.subList(0, results.size() / 2);
+            results = getSortedScreenFun(questionnaire, results, 0, results.size() / 2);
         } else {
-            for (Genre genre : genres) {
-                results.addAll(seriesRepository.findAllByGenre(genre));
-            }
-            // TODO
-            // results.sort();
-            results = results.subList(results.size() / 2, results.size());
+            results = getSortedScreenFun(questionnaire, results, results.size() / 2, results.size());
         }
 
         return results.get(random.nextInt(results.size()));
 
+    }
+
+    private List<ScreenFun> getSortedScreenFun(Questionnaire questionnaire, List<ScreenFun> results, int first, int last) {
+        List<Genre> genres = setGenre(questionnaire);
+
+        for (Genre genre : genres) {
+            results.addAll(seriesRepository.findAllByGenre(genre));
+        }
+
+        results.sort(Comparator.comparing(ScreenFun::getRating));
+        results = results.subList(first, last);
+        return results;
     }
 
     private List<Genre> setGenre(Questionnaire questionnaire) {

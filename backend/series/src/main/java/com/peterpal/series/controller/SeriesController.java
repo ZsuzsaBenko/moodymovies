@@ -23,12 +23,12 @@ public class SeriesController {
     }
 
     @GetMapping("/random")
-    public ScreenFun getRandom() {
+    public ScreenFun getOneRandom() {
         return seriesService.getRandomScreenFun();
     }
 
     @PostMapping("/questionnaire")
-    public ScreenFun getPersonal(@RequestBody Questionnaire questionnaire) {
-        return seriesService.oneForQuestionnaire(questionnaire);
+    public ScreenFun getOneBasedOnQuestionnaire(@RequestBody Questionnaire questionnaire) {
+        return seriesService.getOneForQuestionnaire(questionnaire);
     }
 }
