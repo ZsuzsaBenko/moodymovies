@@ -11,8 +11,8 @@ public class SeriesService {
     Random random = new Random();
 
     public int randomPicker(int size) {
-
         return random.nextInt(size);
     }
+
 
 }

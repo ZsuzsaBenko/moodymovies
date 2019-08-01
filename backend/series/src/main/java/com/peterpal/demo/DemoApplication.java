@@ -90,34 +90,34 @@ public class DemoApplication {
                     .actors(Arrays.asList("David Attenborough", "Pierce Brosnan"))
                     .trailer("").build());
 
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
-//
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
-//
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
-//
-//            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
-//                    .director("N/A").producer("N/A")
-//                    .year().plot("")
-//                    .runtime().poster("")
-//                    .actors(Arrays.asList())
-//                    .trailer("").build());
-//
+            seriesRepository.save(ScreenFun.builder().title("Six Feet Under").funType("Series").rating(8.7).genre(Genre.DRAMA)
+                    .director("Alan Ball").producer("N/A")
+                    .year(2001).plot("A chronicle of the lives of a dysfunctional family who run an independent funeral home in Los Angeles.")
+                    .runtime(55).poster("sfu.jpg")
+                    .actors(Arrays.asList("Peter Krause", "Michael C. Hall", "Frances Conroy", "Lauren Ambrose"))
+                    .trailer("").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Euphoria").funType("Series").rating(8.1).genre(Genre.DRAMA)
+                    .director("Sam Levinson").producer("N/A")
+                    .year(2019).plot("A look at life for a group of high school students as they grapple with issues of drugs, sex, and violence.")
+                    .runtime(55).poster("euphoria.jpg")
+                    .actors(Arrays.asList("Zendaya", "Maude Apatow", "Angus Cloud", "Eric Dane"))
+                    .trailer("").build());
+
+            seriesRepository.save(ScreenFun.builder().title("The Colbys").funType("Series").rating(6.3).genre(Genre.DRAMA)
+                    .director("William Bast").producer("N/A")
+                    .year(1985).plot("This spin-off of Dynasty (1981) featured the adventures of Jeff and Fallon Colby in California.")
+                    .runtime(60).poster("colbies.jpg")
+                    .actors(Arrays.asList("Charlton Heston", "John James", "Katharine Ross", "Emma Samms"))
+                    .trailer("").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Supertrain").funType("Series").rating(4.6).genre(Genre.DRAMA)
+                    .director("Earl W. Wallace").producer("N/A")
+                    .year(1979).plot("The adventures of a nation-spanning train and its passengers.")
+                    .runtime(60).poster("supertrain.jpg")
+                    .actors(Arrays.asList("Edward Andrews", "Harrison Page", "Robert Alda", "Patrick Collins"))
+                    .trailer("").build());
+
 //            seriesRepository.save(ScreenFun.builder().title("").funType("Series").rating().genre()
 //                    .director("N/A").producer("N/A")
 //                    .year().plot("")

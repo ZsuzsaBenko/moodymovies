@@ -1,6 +1,8 @@
 package com.peterpal.demo.controller;
 
 import com.netflix.discovery.converters.Auto;
+import com.peterpal.demo.model.Genre;
+import com.peterpal.demo.model.Mood;
 import com.peterpal.demo.model.Questionnaire;
 import com.peterpal.demo.model.ScreenFun;
 import com.peterpal.demo.repository.SeriesRepository;
@@ -49,7 +51,17 @@ public class SeriesController {
             chooseFor = seriesRepository.findByOrderByRatingAsc();
             return chooseFor.subList(0, 2);
         }
+        if(questionnaire.getMood() == Mood.BE_SCARED || questionnaire.getMood() == Mood.BE_THRILLED){
+        }
 
         return chooseFor;
+    }
+
+    @GetMapping("/test")
+    public List<ScreenFun> getTest() {
+        List<ScreenFun> crimes = seriesRepository.findAllByGenre(Genre.CRIME);
+        List<ScreenFun> adventures = seriesRepository.findAllByGenre(Genre.ADVENTURE);
+        crimes.addAll(adventures);
+        return crimes;
     }
 }
