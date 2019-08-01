@@ -50,7 +50,7 @@ public class AnimeService {
             }
         }
 
-        return results.size() > 0 ? results.get(random.nextInt(results.size())) : null;
+        return results.get(random.nextInt(results.size()));
     }
 
     private List<Genre> setGenre(Questionnaire questionnaire) {
