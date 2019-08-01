@@ -83,7 +83,7 @@ public class SeriesApplication {
                     .year(2015).plot("A frustrated doctor juggles his career, marriage, and family.")
                     .runtime(21).poster("drken.jpg")
                     .actors(Arrays.asList("Ken Jeong", "Suzy Nakamura", "Tisha Campbell-Martin", "Jonathan Slavin"))
-                    .trailer("https://www.imdb.com/videoplayer/vi2160898841").build());
+                    .trailer("https://www.youtube.com/embed/b7RpiPXSZRY").build());
 
             seriesRepository.save(ScreenFun.builder().title("Making a Murderer").funType("series").rating(8.6).genre(Genre.DOCUMENTARY)
                     .director("N/A").producer("N/A")
@@ -147,6 +147,41 @@ public class SeriesApplication {
                     .runtime(44).poster("lost.jpg")
                     .actors(Arrays.asList("Jorge Garcia", "Josh Holloway", "Yunjin Kim", "Evangeline Lilly"))
                     .trailer("https://www.youtube.com/embed/KTu8iDynwNc").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Outlander").funType("series").rating(8.5).genre(Genre.FANTASY)
+                    .director("Ronald D. Moore").producer("N/A")
+                    .year(2014).plot("An English combat nurse from 1945 is mysteriously swept back in time to 1743.")
+                    .runtime(64).poster("outlander.jpg")
+                    .actors(Arrays.asList("Caitriona Balfe", "Sam Heughan", "Duncan Lacroix", "Tobias Menzies"))
+                    .trailer("https://www.youtube.com/embed/PFFKjptRr7Y").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Grimm").funType("series").rating(7.8).genre(Genre.FANTASY)
+                    .director("Stephen Carpenter").producer("N/A")
+                    .year(2011).plot("A homicide detective discovers he is a descendant of hunters who fight supernatural forces.")
+                    .runtime(45).poster("grimm.jpg")
+                    .actors(Arrays.asList("David Giuntoli", "Russell Hornsby", "Silas Weir Mitchell", "Sasha Roiz"))
+                    .trailer("https://www.youtube.com/embed/2rVy3RBJmNo").build());
+
+            seriesRepository.save(ScreenFun.builder().title("Vikings").funType("series").rating(8.6).genre(Genre.ADVENTURE)
+                    .director("Michael Hirst").producer("N/A")
+                    .year(2013).plot("Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore - and raid - the distant shores across the ocean.")
+                    .runtime(44).poster("vikings.jpg")
+                    .actors(Arrays.asList("Gustaf Skarsgård", "Katheryn Winnick", "Alexander Ludwig", "Travis Fimmel"))
+                    .trailer("https://www.youtube.com/embed/SLOa9s1q_Ug").build());
+
+            seriesRepository.save(ScreenFun.builder().title("True Detective").funType("series").rating(9.0).genre(Genre.ADVENTURE)
+                    .director("Nic Pizzolatto").producer("N/A")
+                    .year(2014).plot("Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.")
+                    .runtime(44).poster("td.jpg")
+                    .actors(Arrays.asList("Matthew McConaughey", "Colin Farrell", "Mahershala Ali", "Woody Harrelson"))
+                    .trailer("https://www.youtube.com/embed/fVQUcaO4AvE").build());
+
+            seriesRepository.save(ScreenFun.builder().title("The Big Bang Theory").funType("series").rating(8.2).genre(Genre.COMEDY)
+                    .director("Chuck Lorre").producer("N/A")
+                    .year(2007).plot("A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.")
+                    .runtime(22).poster("bbt.jpg")
+                    .actors(Arrays.asList("Johnny Galecki", "Jim Parsons", "Kaley Cuoco", "Simon Helberg"))
+                    .trailer("https://www.youtube.com/embed/WBb3fojgW0Q").build());
 
         };
     }

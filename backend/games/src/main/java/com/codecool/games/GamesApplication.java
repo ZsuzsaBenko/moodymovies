@@ -235,7 +235,7 @@ public class GamesApplication {
                     .title("Canvas Rider")
                     .trailer("https://www.youtube.com/embed/Q91yUSWyeZ0")
                     .year(2013)
-                    .actors(Arrays.asList())
+                    .actors(Arrays.asList("Benjamin Barker", "Morgan Watson", "Spencer Reynolds", "Declan Chambers"))
                     .build();
 
             ScreenFun animated2 = ScreenFun.builder()
