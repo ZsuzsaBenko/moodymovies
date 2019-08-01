@@ -114,70 +114,70 @@ public class SeriesApplication {
                     .trailer("https://www.youtube.com/embed/VT6Fq1ENb8s").build());
 
             seriesRepository.save(ScreenFun.builder().title("Euphoria").funType("series").rating(8.1).genre(Genre.DRAMA)
-                    .director("Sam Levinson").producer("N/A")
+                    .director("Sam Levinson").producer("Sam Levinson")
                     .year(2019).plot("A look at life for a group of high school students as they grapple with issues of drugs, sex, and violence.")
                     .runtime(55).poster("euphoria.jpg")
                     .actors(Arrays.asList("Zendaya", "Maude Apatow", "Angus Cloud", "Eric Dane"))
                     .trailer("https://www.youtube.com/embed/sTZ6NBPmWc4").build());
 
             seriesRepository.save(ScreenFun.builder().title("The Colbys").funType("series").rating(6.3).genre(Genre.DRAMA)
-                    .director("William Bast").producer("N/A")
+                    .director("Harry Falk").producer("William Bast")
                     .year(1985).plot("This spin-off of Dynasty (1981) featured the adventures of Jeff and Fallon Colby in California.")
                     .runtime(60).poster("colbies.jpg")
                     .actors(Arrays.asList("Charlton Heston", "John James", "Katharine Ross", "Emma Samms"))
                     .trailer("https://www.youtube.com/embed/qZMSg8v11Ms").build());
 
             seriesRepository.save(ScreenFun.builder().title("Supertrain").funType("series").rating(4.6).genre(Genre.DRAMA)
-                    .director("Earl W. Wallace").producer("N/A")
+                    .director("Barry Crane").producer("Earl W. Wallace")
                     .year(1979).plot("The adventures of a nation-spanning train and its passengers.")
                     .runtime(60).poster("supertrain.jpg")
                     .actors(Arrays.asList("Edward Andrews", "Harrison Page", "Robert Alda", "Patrick Collins"))
                     .trailer("https://www.youtube.com/embed/gUERtAe73NI").build());
 
             seriesRepository.save(ScreenFun.builder().title("Ironside").funType("series").rating(7.0).genre(Genre.CRIME)
-                    .director("Collier Young").producer("N/A")
+                    .director("Don Weis").producer("Collier Young")
                     .year(1967).plot("Wheelchair-bound detective Robert T. Ironside battles the bad guys on the streets of San Francisco.")
                     .runtime(60).poster("ironside.jpg")
                     .actors(Arrays.asList("Raymond Burr", "Don Galloway", "Don Mitchell", "Barbara Anderson"))
                     .trailer("https://www.youtube.com/embed/NfLPYL3NcWM").build());
 
             seriesRepository.save(ScreenFun.builder().title("Lost").funType("series").rating(8.4).genre(Genre.ADVENTURE)
-                    .director("J.J. Abrams").producer("N/A")
+                    .director("Jack Bender").producer("J.J. Abrams")
                     .year(2004).plot("The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.")
                     .runtime(44).poster("lost.jpg")
                     .actors(Arrays.asList("Jorge Garcia", "Josh Holloway", "Yunjin Kim", "Evangeline Lilly"))
                     .trailer("https://www.youtube.com/embed/KTu8iDynwNc").build());
 
             seriesRepository.save(ScreenFun.builder().title("Outlander").funType("series").rating(8.5).genre(Genre.FANTASY)
-                    .director("Ronald D. Moore").producer("N/A")
+                    .director("Metin Hüseyin").producer("Ronald D. Moore")
                     .year(2014).plot("An English combat nurse from 1945 is mysteriously swept back in time to 1743.")
                     .runtime(64).poster("outlander.jpg")
                     .actors(Arrays.asList("Caitriona Balfe", "Sam Heughan", "Duncan Lacroix", "Tobias Menzies"))
                     .trailer("https://www.youtube.com/embed/PFFKjptRr7Y").build());
 
             seriesRepository.save(ScreenFun.builder().title("Grimm").funType("series").rating(7.8).genre(Genre.FANTASY)
-                    .director("Stephen Carpenter").producer("N/A")
+                    .director("Norberto Barba").producer("Stephen Carpenter")
                     .year(2011).plot("A homicide detective discovers he is a descendant of hunters who fight supernatural forces.")
                     .runtime(45).poster("grimm.jpg")
                     .actors(Arrays.asList("David Giuntoli", "Russell Hornsby", "Silas Weir Mitchell", "Sasha Roiz"))
                     .trailer("https://www.youtube.com/embed/2rVy3RBJmNo").build());
 
             seriesRepository.save(ScreenFun.builder().title("Vikings").funType("series").rating(8.6).genre(Genre.ADVENTURE)
-                    .director("Michael Hirst").producer("N/A")
+                    .director("Ciaran Donnelly").producer("Michael Hirst")
                     .year(2013).plot("Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore - and raid - the distant shores across the ocean.")
                     .runtime(44).poster("vikings.jpg")
                     .actors(Arrays.asList("Gustaf Skarsgård", "Katheryn Winnick", "Alexander Ludwig", "Travis Fimmel"))
                     .trailer("https://www.youtube.com/embed/SLOa9s1q_Ug").build());
 
             seriesRepository.save(ScreenFun.builder().title("True Detective").funType("series").rating(9.0).genre(Genre.ADVENTURE)
-                    .director("Nic Pizzolatto").producer("N/A")
+                    .director("Cary Joji Fukunaga").producer("Nic Pizzolatto")
                     .year(2014).plot("Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law.")
                     .runtime(44).poster("td.jpg")
                     .actors(Arrays.asList("Matthew McConaughey", "Colin Farrell", "Mahershala Ali", "Woody Harrelson"))
                     .trailer("https://www.youtube.com/embed/fVQUcaO4AvE").build());
 
             seriesRepository.save(ScreenFun.builder().title("The Big Bang Theory").funType("series").rating(8.2).genre(Genre.COMEDY)
-                    .director("Chuck Lorre").producer("N/A")
+                    .director("Mark Cendrowski").producer("Chuck Lorre")
                     .year(2007).plot("A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.")
                     .runtime(22).poster("bbt.jpg")
                     .actors(Arrays.asList("Johnny Galecki", "Jim Parsons", "Kaley Cuoco", "Simon Helberg"))
