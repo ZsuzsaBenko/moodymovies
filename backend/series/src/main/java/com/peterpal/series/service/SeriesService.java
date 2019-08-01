@@ -1,5 +1,6 @@
 package com.peterpal.series.service;
 
+import com.peterpal.series.model.Mood;
 import com.peterpal.series.model.Questionnaire;
 import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.model.Genre;
@@ -7,6 +8,7 @@ import com.peterpal.series.model.ScreenFun;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -19,10 +21,15 @@ public class SeriesService {
     @Autowired
     SeriesRepository seriesRepository;
 
-    public ScreenFun getRandomScreenFun() {
-        List<ScreenFun> allScreenFun = seriesRepository.findAll();
-        int size = allScreenFun.size();
-        return allScreenFun.get(randomPicker(size));
+    public ScreenFun getRandomScreenFun(List<ScreenFun> series) {
+        int size = series.size();
+        return series.get(randomPicker(size));
+    }
+
+    public ScreenFun getRandomScreenFunAll() {
+        List<ScreenFun> series = getALl();
+        int size = series.size();
+        return series.get(randomPicker(size));
     }
 
     public int randomPicker(int size) {
@@ -85,22 +92,38 @@ public class SeriesService {
         return laughs;
     }
 
-    public List<ScreenFun> collectForDay() {
-        List<ScreenFun> forDays = collectTheThinkLearn();
-        List<ScreenFun> forDays2 = collectTheLaugh();
-        forDays.addAll(forDays2);
-        return forDays;
-    }
-
-    public List<ScreenFun> collectForNight() {
-        List<ScreenFun> forNigths = collectTheCry();
-        List<ScreenFun> forNigths2 = collectTheScaredThrilled();
-        forNigths.addAll(forNigths2);
-        return forNigths;
-    }
 
     public ScreenFun oneForQuestionnaire(Questionnaire questionnaire) {
-            return null;
+        replaceTheNull(questionnaire);
+        List<ScreenFun> filteredSeries = getAllInOrderByRating();
+        if (questionnaire.getMood() == Mood.CRY) {
+            filteredSeries = collectTheCry();
+        }
+        if (questionnaire.getMood() == Mood.THINK || questionnaire.getMood() == Mood.LEARN) {
+            filteredSeries = collectTheThinkLearn();
+        }
+        if (questionnaire.getMood() == Mood.BE_THRILLED || questionnaire.getMood() == Mood.BE_SCARED) {
+            filteredSeries = collectTheScaredThrilled();
+        }
+        if (questionnaire.getMood() == Mood.LAUGH) {
+            filteredSeries = collectTheLaugh();
+        }
+
+        filteredSeries.sort(Comparator.comparingDouble(ScreenFun::getRating));
+
+        if (questionnaire.getMasochist() == 0 ) {
+            filteredSeries = getSecondHalfOfTheList(filteredSeries);
+        }
+        if (questionnaire.getMasochist() == 1 ) {
+            filteredSeries = getFirstHalfOfTheList(filteredSeries);
+        }
+
+        return getRandomScreenFun(filteredSeries);
+    }
+
+    public Questionnaire replaceTheNull(Questionnaire questionnaire) {
+        if (questionnaire.getMood() == null) questionnaire.setMood(Mood.BE_THRILLED);
+        return questionnaire;
     }
 
 

@@ -6,10 +6,7 @@ import com.peterpal.series.model.ScreenFun;
 import com.peterpal.series.repository.SeriesRepository;
 import com.peterpal.series.service.SeriesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,12 +27,12 @@ public class SeriesController {
 
     @GetMapping("/random")
     public ScreenFun getRandom() {
-        return seriesService.getRandomScreenFun();
+        return seriesService.getRandomScreenFunAll();
     }
 
-    @GetMapping("/questionnaire")
+    @PostMapping("/questionnaire")
     public ScreenFun getPersonal(@RequestBody Questionnaire questionnaire) {
-        return seriesService.getALl().get(0);
+        return seriesService.oneForQuestionnaire(questionnaire);
     }
 
 }
