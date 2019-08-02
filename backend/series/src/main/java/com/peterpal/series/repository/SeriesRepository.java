@@ -12,6 +12,6 @@ public interface SeriesRepository extends JpaRepository<ScreenFun, Long> {
 
     List<ScreenFun> findByOrderByRatingAsc();
 
-    List<ScreenFun> findAllByGenre(Genre genre);
+    List<ScreenFun> findAllByGenreIn(List<Genre> genres);
 
 }
