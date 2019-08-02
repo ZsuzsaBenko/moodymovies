@@ -26,30 +26,20 @@ public class MovieService {
     }
 
     public ScreenFun findMovieBasedOnProfile(Questionnaire questionnaire) {
-        List<ScreenFun> movies = new ArrayList<>();
+        List<ScreenFun> movies;
+        List<Genre> genres;
+
         if (questionnaire.getAge() < 18) {
-            movies = movieRepository.findAllByGenre(Genre.ANIMATED);
-            movies.addAll(movieRepository.findAllByGenre(Genre.FANTASY));
-            movies.addAll(movieRepository.findAllByGenre(Genre.ADVENTURE));
+            genres = Arrays.asList(Genre.ADVENTURE, Genre.ANIMATED, Genre.FANTASY);
         } else {
             if (questionnaire.getMasochist() == 1) {
-                for (Genre genre : this.groupGenresForMasochists(questionnaire.getMood())) {
-                    movies.addAll(movieRepository.findAllByGenre(genre));
-                }
+                genres = this.groupGenresForMasochists(questionnaire.getMood());
             } else {
-                for (Genre genre : this.groupGenresForNormalPeople(questionnaire.getMood())) {
-                    movies.addAll(movieRepository.findAllByGenre(genre));
-                }
+                genres = this.groupGenresForNormalPeople(questionnaire.getMood());
             }
         }
-
-        int randomNumber = random.nextInt(movies.size());
-        int horoscopeNumber = this.getHoroscopeNumber(questionnaire.getHoroscope());
-        ScreenFun movie = (horoscopeNumber + randomNumber < movies.size()) ?
-                movies.get(horoscopeNumber + randomNumber) : movies.get(randomNumber);
-        log.info("Chosen movie is: " + movie.getTitle());
-
-        return movie;
+        movies = movieRepository.findAllByGenreIn(genres);
+        return chooseMovie(questionnaire, movies);
     }
 
     public ScreenFun getARandomMovie() {
@@ -114,6 +104,17 @@ public class MovieService {
                 break;
         }
         return genres;
+    }
+
+    private ScreenFun chooseMovie(Questionnaire questionnaire, List<ScreenFun> movies) {
+        int randomNumber = random.nextInt(movies.size());
+        int horoscopeNumber = this.getHoroscopeNumber(questionnaire.getHoroscope());
+
+        ScreenFun movie = (horoscopeNumber + randomNumber < movies.size()) ?
+                movies.get(horoscopeNumber + randomNumber) : movies.get(randomNumber);
+
+        log.info("Chosen movie is: " + movie.getTitle());
+        return movie;
     }
 
     private int getHoroscopeNumber(Horoscope horoscope) {

@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface MovieRepository extends JpaRepository<ScreenFun, Long> {
 
-    List<ScreenFun> findAllByGenre(Genre genre);
+    List<ScreenFun> findAllByGenreIn(List<Genre> genres);
 }
