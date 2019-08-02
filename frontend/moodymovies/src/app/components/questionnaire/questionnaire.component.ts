@@ -32,8 +32,6 @@ export class QuestionnaireComponent implements OnInit {
     questionnaire.mood = this.mood || 'LAUGH';
     questionnaire.masochist = parseInt(this.masochist, 10) || 1;
 
-    console.log(questionnaire);
-
     const navigationExtras: NavigationExtras = {
       queryParams: questionnaire
     };
