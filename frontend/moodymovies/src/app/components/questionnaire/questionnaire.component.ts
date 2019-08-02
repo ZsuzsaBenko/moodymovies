@@ -24,13 +24,15 @@ export class QuestionnaireComponent implements OnInit {
 
   onSubmit() {
     const questionnaire = new Questionnaire();
-    questionnaire.gender = this.gender != null ? parseInt(this.gender, 10) : 1;
+    questionnaire.gender = parseInt(this.gender, 10) || 1;
     questionnaire.age = (this.age >= 0 && this.age <= 100) ? this.age : 18;
-    questionnaire.horoscope = this.horoscope != null ? this.horoscope : 'AQUARIUS';
-    questionnaire.alone = this.alone != null ? parseInt(this.alone, 10) : 1;
-    questionnaire.timeOfDay = this.timeOfDay != null ? parseInt(this.timeOfDay, 10) : 1;
-    questionnaire.mood = this.mood != null ? this.mood : 'LAUGH';
-    questionnaire.masochist = this.masochist != null ? parseInt(this.masochist, 10) : 1;
+    questionnaire.horoscope = this.horoscope || 'AQUARIUS';
+    questionnaire.alone = parseInt(this.alone, 10) || 1;
+    questionnaire.timeOfDay = parseInt(this.timeOfDay, 10) || 1;
+    questionnaire.mood = this.mood || 'LAUGH';
+    questionnaire.masochist = parseInt(this.masochist, 10) || 1;
+
+    console.log(questionnaire);
 
     const navigationExtras: NavigationExtras = {
       queryParams: questionnaire
