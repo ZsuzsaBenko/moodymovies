@@ -6,9 +6,9 @@
     <div class="form-container">
       <form ngForm (ngSubmit)="onSubmit()">
         <p>1) Are you male or female?</p>
-        <input type="radio" id="male" name="gender" value="1" [(ngModel)]='gender' checked>
+        <input type="radio" id="male" name="gender" value="1" [(ngModel)]="gender">
         <label for="male" class="radio-label-left">male</label>
-        <input type="radio" id="female" name="gender" value="0" [(ngModel)]='gender'>
+        <input type="radio" id="female" name="gender" value="0" [(ngModel)]="gender">
         <label for="female">female</label>
         <p><label for="age">How old are you?</label></p>
         <input type="number" min="0" max="100" id="age" name="age" [(ngModel)]="age">
@@ -28,12 +28,12 @@
           <option value="CAPRICORN">Capricorn</option>
         </select>
         <p>3) Are you going to be alone?</p>
-        <input type="radio" id="alone-yes" name="alone" value="1" [(ngModel)]="alone" checked>
+        <input type="radio" id="alone-yes" name="alone" value="1" [(ngModel)]="alone">
         <label for="alone-yes" class="radio-label-left">yes</label>
         <input type="radio" id="alone-no" name="alone" value="0" [(ngModel)]="alone">
         <label for="alone-no">no</label>
         <p>4) What time are you going to watch the film or play the game?</p>
-        <input type="radio" id="day" name="time-of-day" value="1" [(ngModel)]="timeOfDay" checked>
+        <input type="radio" id="day" name="time-of-day" value="1" [(ngModel)]="timeOfDay">
         <label for="day" class="radio-label-left">during the day</label>
         <input type="radio" id="night" name="time-of-day" value="0" [(ngModel)]="timeOfDay">
         <label for="night">at night</label>
@@ -47,7 +47,7 @@
           <option value="BE_THRILLED">be thrilled?</option>
         </select>
         <p>6) A last question - are you a masochist?</p>
-        <input type="radio" id="masochist-yes" name="masochist" value="1" [(ngModel)]="masochist"checked>
+        <input type="radio" id="masochist-yes" name="masochist" value="1" [(ngModel)]="masochist">
         <label for="masochist-yes" class="radio-label-left">yes</label>
         <input type="radio" id="masochist-no" name="masochist" value="0" [(ngModel)]="masochist">
         <label for="masochist-no">no</label>

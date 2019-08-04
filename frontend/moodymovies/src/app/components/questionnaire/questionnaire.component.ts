@@ -8,13 +8,13 @@ import {NavigationExtras, Router} from '@angular/router';
   styleUrls: ['./questionnaire.component.css']
 })
 export class QuestionnaireComponent implements OnInit {
-  gender: string;
+  gender: number;
   age: number;
   horoscope: string;
-  alone: string;
-  timeOfDay: string;
+  alone: number;
+  timeOfDay: number;
   mood: string;
-  masochist: string;
+  masochist: number;
 
   constructor(private router: Router) {
   }
@@ -24,13 +24,13 @@ export class QuestionnaireComponent implements OnInit {
 
   onSubmit() {
     const questionnaire = new Questionnaire();
-    questionnaire.gender = parseInt(this.gender, 10) || 1;
+    questionnaire.gender = this.gender || 1;
     questionnaire.age = (this.age >= 0 && this.age <= 100) ? this.age : 18;
     questionnaire.horoscope = this.horoscope || 'AQUARIUS';
-    questionnaire.alone = parseInt(this.alone, 10) || 1;
-    questionnaire.timeOfDay = parseInt(this.timeOfDay, 10) || 1;
+    questionnaire.alone = this.alone || 1;
+    questionnaire.timeOfDay = this.timeOfDay || 1;
     questionnaire.mood = this.mood || 'LAUGH';
-    questionnaire.masochist = parseInt(this.masochist, 10) || 1;
+    questionnaire.masochist = this.masochist || 1;
 
     const navigationExtras: NavigationExtras = {
       queryParams: questionnaire

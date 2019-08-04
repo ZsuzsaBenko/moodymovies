@@ -6,7 +6,7 @@
     <a [routerLink]="['/questionnaire']">Get a personalized choice!</a>
     <div class="category-choice">See all from a category:
       <form ngForm (ngSubmit)="onSubmit()">
-        <input type="radio" id="anime" name="funType" value="anime" [(ngModel)]="funType" checked>
+        <input type="radio" id="anime" name="funType" value="anime" [(ngModel)]="funType">
         <label class="radio-label-left" for="anime">anime</label>
         <input type="radio" id="game" name="funType" value="games" [(ngModel)]="funType">
         <label class="radio-label-left" for="game">game</label>
