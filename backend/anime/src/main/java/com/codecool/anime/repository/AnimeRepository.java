@@ -12,7 +12,5 @@ public interface AnimeRepository extends JpaRepository<ScreenFun, Long> {
 
     List<ScreenFun> getAllByOrderByTitle();
 
-    List<ScreenFun> getScreenFunsByRatingGreaterThanAndGenre(double rating, Genre genre);
-
-    List<ScreenFun> getScreenFunsByRatingLessThanEqualAndGenre(double rating, Genre genre);
+    List<ScreenFun> getAllByRatingIsBetweenAndGenreIn(double from, double to, List<Genre> genres);
 }

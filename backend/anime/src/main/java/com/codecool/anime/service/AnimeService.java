@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -37,18 +36,10 @@ public class AnimeService {
 
     public ScreenFun getOneBasedOnQuestionnaire(Questionnaire questionnaire) {
         List<Genre> genres = setGenre(questionnaire);
-        List<ScreenFun> results = new ArrayList<>();
-        double rating = 7;
+        double from = questionnaire.getMasochist() == 1 ? 0 : 7;
+        double to = questionnaire.getMasochist() == 1 ? 7 : 11;
 
-        if (questionnaire.getMasochist() == 1) {
-            for (Genre genre : genres) {
-                results.addAll(repository.getScreenFunsByRatingLessThanEqualAndGenre(rating, genre));
-            }
-        } else {
-            for (Genre genre : genres) {
-                results.addAll(repository.getScreenFunsByRatingGreaterThanAndGenre(rating, genre));
-            }
-        }
+        List<ScreenFun> results = repository.getAllByRatingIsBetweenAndGenreIn(from, to, genres);
 
         return results.get(random.nextInt(results.size()));
     }
