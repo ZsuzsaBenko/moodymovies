@@ -5,6 +5,11 @@ Our task was to create a Java web application consisting of several microservice
 
 Technologies: Java / Spring Boot, H2 databases / Hibernate, Spring Cloud (Eureka, Zuul), Swagger, Lombok, Angular 8.
 
+Home page:
 ![Moody Movies home page](moodymovies1.png)
+
+Movies page:
 ![Moody Movies movies page](moodymovies2.png)
+
+Details page:
 ![Moody Movies details page](moodymovies3.png)
